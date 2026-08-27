@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /booking
+
+Sitemap: https://hybridlifecoaching.net/sitemap.xml

@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- ===================================================================
+     HYBRID LIFE COACHING
+     Everything you'll need to change is in the HL config block below.
+     =================================================================== -->
+<script src="/config.js"></script>
+
+<title>Hybrid Life Coaching — Level up your body and mind without giving up your life</title>
+<meta name="description" content="Online 1:1 coaching for people with businesses, careers, travel and a social life. Custom nutrition, training and mindset built around the calendar you actually have.">
+<link rel="canonical" href="https://hybridlifecoaching.net/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hybrid Life Coaching">
+<meta property="og:title" content="Level up your body and mind without giving up your life">
+<meta property="og:description" content="Online 1:1 coaching for people with full calendars. Travel, work dinners and 60-hour weeks included, not ignored.">
+<meta property="og:url" content="https://hybridlifecoaching.net/">
+<meta property="og:image" content="https://hybridlifecoaching.net/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Level up your body and mind without giving up your life">
+<meta name="twitter:description" content="Online 1:1 coaching for people with full calendars.">
+<meta name="twitter:image" content="https://hybridlifecoaching.net/assets/og-image.jpg">
+
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Hybrid Life Coaching",
+  "description": "Online 1:1 nutrition, training and mindset coaching for people with demanding careers and full calendars.",
+  "url": "https://hybridlifecoaching.net/",
+  "image": "https://hybridlifecoaching.net/assets/og-image.jpg",
+  "founder": { "@type": "Person", "name": "Myles Harris", "jobTitle": "Founder and Coach" },
+  "areaServed": "Worldwide",
+  "priceRange": "$$$",
+  "sameAs": [ "https://www.instagram.com/mylesharrisfit", "https://www.instagram.com/hybridlifeco" ]
+}
+</script>
+
+<style>html,body{margin:0;padding:0;background:#0A0A0B}
+/* ---------- booking + form embeds ---------- */
+#hl .hl-embed-wrap{margin:40px auto 0;max-width:760px}
+#hl .hl-embed{background:var(--coal);border:1px solid var(--line-d);border-radius:4px;overflow:hidden;min-height:640px}
+#hl .hl-embed iframe{width:100%;border:0;display:block;background:transparent}
+#hl .hl-embed-note{padding:56px 28px;text-align:center}
+#hl .hl-embed-note .eyebrow{margin-bottom:14px}
+#hl .hl-embed-note p{color:var(--mist);font-size:15px;max-width:46ch;margin:0 auto 22px}
+#hl .btn-ghost{border:1px solid var(--line-d);color:var(--bone);background:transparent}
+#hl .btn-ghost:hover{border-color:var(--red-lt);color:var(--red-lt)}
+@media(max-width:640px){
+  #hl .btn-ghost{margin-left:0!important;margin-top:12px}
+  #hl .final .btn{display:block;width:100%;text-align:center}
+}
+/* video slots with no ID yet are hidden by footer script */
+#hl .vcard[hidden]{display:none!important}
+
+</style>
+
+<!-- Tracking loads only once you put the IDs in config.js -->
+<script src="/tracking.js"></script>
+<!-- ===================================================================
+     HYBRID LIFE — GHL BLOCK 1 of 3 : HEADER CODE
+     Paste into: Settings → Custom Code → Header Tracking Code
+     (or Page Settings → Custom Code → Header, for one page only)
+     =================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- tokens + hard reset, scoped to #hl only ---------- */
+#hl{
+  --ink:#0A0A0B; --coal:#121214; --char:#1A1A1D;
+  --paper:#F2F0ED; --paper-2:#E7E4E0;
+  --red:#B01B23; --red-lt:#E0555C; --wine:#4A0C11;
+  --bone:#EDEBE9; --mist:#9A9799; --ash:#67646A; --graphite:#3A3A3E;
+  --line-d:rgba(237,235,233,.11); --line-l:rgba(10,10,11,.13);
+  --display:'Archivo',sans-serif; --accent:'Archivo',sans-serif;
+  --body:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+  --gut:clamp(20px,5vw,72px); --maxw:1240px;
+
+  /* forces full-bleed even inside a padded GHL row */
+  position:relative;
+  width:100vw;
+  max-width:100vw;
+  margin-left:calc(50% - 50vw);
+  overflow-x:hidden;
+
+  background:var(--ink);
+  color:var(--bone);
+  font-family:var(--body);
+  font-weight:300;
+  line-height:1.6;
+  text-align:left;
+  -webkit-font-smoothing:antialiased;
+}
+#hl *,#hl *::before,#hl *::after{box-sizing:border-box;margin:0;padding:0}
+#hl p,#hl h1,#hl h2,#hl h3,#hl h4,#hl ul,#hl ol,#hl li,#hl dl,#hl dd,#hl dt,#hl blockquote,#hl figure{margin:0;padding:0}
+#hl ul,#hl ol{list-style:none}
+#hl img{max-width:100%;display:block;height:auto}
+#hl a{color:inherit;text-decoration:none}
+#hl button{font:inherit;color:inherit;background:none;border:0}
+#hl :focus-visible{outline:2px solid var(--red-lt);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){#hl *{animation:none!important;transition:none!important}}
+
+#hl .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+/* ---------- type ---------- */
+#hl .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red-lt);line-height:1.5}
+#hl .h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.4vw,52px);line-height:1.02;letter-spacing:-.02em;text-transform:uppercase;color:inherit}
+#hl .h2 em{font-family:var(--display);font-style:normal;font-weight:400;text-transform:uppercase;letter-spacing:-.015em;font-size:1em;color:var(--red-lt)}
+#hl .light .h2 em{color:var(--red)}
+#hl .lede{font-size:clamp(16px,1.5vw,18px);color:var(--mist);max-width:56ch}
+
+/* ---------- sections ---------- */
+#hl .sec{padding:clamp(72px,10vw,128px) 0;position:relative;overflow:hidden}
+#hl .sec-head{max-width:70ch;position:relative;z-index:2}
+#hl .sec-head .h2{margin:16px 0 20px}
+#hl .light{background:var(--paper);color:var(--ink)}
+#hl .light .eyebrow{color:var(--red)}
+#hl .light .lede{color:var(--graphite)}
+#hl .grain{position:absolute;inset:0;opacity:.42;mix-blend-mode:overlay;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E")}
+
+/* ---------- buttons ---------- */
+#hl .btn{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:17px 30px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+#hl .btn-solid{background:var(--red);color:#fff}
+#hl .btn-solid:hover{background:#93151C;color:#fff}
+#hl .btn-ghost{border-color:rgba(237,235,233,.35);color:var(--bone)}
+#hl .btn-ghost:hover{border-color:var(--bone);background:rgba(237,235,233,.07)}
+
+/* ---------- hero + VSL ---------- */
+#hl .hero{position:relative;background:var(--ink);overflow:hidden;padding:clamp(56px,8vw,92px) 0 clamp(60px,8vw,96px)}
+#hl .hero-bg{position:absolute;inset:0;
+  background:
+    radial-gradient(90% 70% at 50% -10%,rgba(176,27,35,.3) 0%,rgba(10,10,11,0) 62%),
+    radial-gradient(70% 60% at 8% 100%,rgba(74,12,17,.55) 0%,rgba(10,10,11,0) 65%),
+    linear-gradient(180deg,#131215 0%,#0A0A0B 60%,#070708 100%)}
+#hl .hero .wrap{position:relative;z-index:3;text-align:center}
+#hl .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.6vw,66px);line-height:.98;letter-spacing:-.035em;text-transform:uppercase;margin:22px auto 0;max-width:18ch;color:var(--bone)}
+#hl .hero h1 em{display:block;font-family:var(--display);font-style:normal;font-weight:400;text-transform:uppercase;letter-spacing:-.02em;font-size:.82em;color:var(--red-lt);margin-top:.12em}
+#hl .hero .sub{margin:24px auto 0;max-width:56ch;font-size:clamp(15px,1.4vw,17px);color:#B4B1B3}
+
+#hl .player-shell{max-width:1000px;margin:clamp(38px,5vw,56px) auto 0;position:relative}
+#hl .player-shell::before{content:'';position:absolute;inset:-1px;border:1px solid rgba(176,27,35,.55);pointer-events:none;z-index:4}
+#hl .player{position:relative;aspect-ratio:16/9;background:var(--coal);cursor:pointer;overflow:hidden;width:100%;display:block;padding:0;border:0}
+#hl .player::after{content:'';position:absolute;inset:0;background-image:var(--poster,none);background-size:cover;background-position:center;z-index:0}
+#hl .player-veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,10,11,.25) 0%,rgba(10,10,11,.55) 65%,rgba(10,10,11,.8) 100%)}
+#hl .player-fallback{position:absolute;inset:0;z-index:1;background:radial-gradient(70% 60% at 50% 40%,rgba(176,27,35,.28),rgba(10,10,11,1) 78%),var(--coal)}
+#hl .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:clamp(74px,9vw,104px);height:clamp(74px,9vw,104px);border-radius:50%;border:1px solid rgba(237,235,233,.55);background:rgba(10,10,11,.35);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);display:grid;place-items:center;transition:background .3s,border-color .3s,transform .3s}
+#hl .play svg{width:26px;height:26px;fill:var(--bone);margin-left:4px;transition:fill .3s}
+#hl .player:hover .play{background:var(--red);border-color:var(--red);transform:translate(-50%,-50%) scale(1.06)}
+#hl .player:hover .play svg{fill:#fff}
+#hl .player-meta{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:20px clamp(16px,3vw,28px);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);text-align:left}
+#hl .player-meta strong{color:var(--bone);font-weight:500;display:block;margin-bottom:5px;letter-spacing:.1em}
+#hl .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
+
+#hl .chapters{display:flex;flex-wrap:wrap;justify-content:center;margin-top:22px;border-top:1px solid var(--line-d)}
+#hl .chapters li{padding:16px 26px;border-right:1px solid var(--line-d);font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mist)}
+#hl .chapters li:last-child{border-right:0}
+#hl .chapters b{color:var(--red-lt);font-weight:500;margin-right:10px}
+@media(max-width:700px){#hl .chapters li{padding:13px 16px;font-size:9.5px}}
+
+#hl .hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:36px}
+#hl .hero-note{margin-top:22px;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ash)}
+
+/* ---------- strip ---------- */
+#hl .strip{background:var(--coal);border-top:1px solid rgba(176,27,35,.35)}
+#hl .strip-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);display:grid;grid-template-columns:repeat(3,1fr)}
+#hl .stat{padding:38px 0;text-align:center;border-right:1px solid var(--line-d)}
+#hl .stat:last-child{border-right:0}
+#hl .stat b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.02em;color:var(--red-lt);line-height:1}
+#hl .stat span{display:block;margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+@media(max-width:700px){#hl .strip-in{grid-template-columns:1fr}#hl .stat{border-right:0;border-bottom:1px solid var(--line-d);padding:26px 0}#hl .stat:last-child{border-bottom:0}}
+
+/* ---------- transformations ---------- */
+#hl .ba-feature{margin-top:56px;position:relative;z-index:2;display:grid;grid-template-columns:1.4fr .6fr;gap:clamp(24px,4vw,52px);align-items:center}
+@media(max-width:900px){#hl .ba-feature{grid-template-columns:1fr}}
+#hl .ba{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--coal);border:1px solid var(--line-d);touch-action:none;-webkit-user-select:none;user-select:none;cursor:ew-resize}
+#hl .ba-img{position:absolute;inset:0;background-size:cover;background-position:center}
+#hl .ba-before{background-image:var(--before,none);background-color:#1A1A1D}
+#hl .ba-after{background-image:var(--after,none);background-color:#242428;-webkit-clip-path:inset(0 0 0 var(--split,50%));clip-path:inset(0 0 0 var(--split,50%))}
+#hl .ba-ph{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash)}
+#hl .ba-after .ba-ph{color:#8E8A8C}
+#hl .ba-handle{position:absolute;top:0;bottom:0;left:var(--split,50%);width:2px;background:var(--red);z-index:4;pointer-events:none}
+#hl .ba-knob{position:absolute;top:50%;left:var(--split,50%);transform:translate(-50%,-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:var(--red);display:grid;place-items:center;pointer-events:none;box-shadow:0 0 0 1px rgba(237,235,233,.35),0 6px 22px rgba(0,0,0,.55)}
+#hl .ba-knob svg{width:18px;height:18px;fill:#fff}
+#hl .ba-tag{position:absolute;top:16px;z-index:6;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--bone);background:rgba(10,10,11,.6);padding:6px 11px;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+#hl .ba-tag.l{left:16px}
+#hl .ba-tag.r{right:16px}
+
+#hl .ba-facts h3{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:6px;color:var(--bone)}
+#hl .ba-facts .role{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--red-lt);margin-bottom:22px}
+#hl .ba-facts dl{border-top:1px solid var(--line-d)}
+#hl .ba-facts .row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line-d);font-size:14px}
+#hl .ba-facts dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ash)}
+#hl .ba-facts dd{color:var(--bone);font-weight:400}
+#hl .ba-facts blockquote{margin-top:24px;font-size:16px;line-height:1.55;color:var(--mist);border-left:2px solid var(--red);padding-left:18px}
+
+/* ---------- logo lockups ---------- */
+#hl .hero-logo{height:clamp(48px,6vw,74px);width:auto;max-width:78%;margin:0 auto 18px;display:block;object-fit:contain}
+#hl .final-logo{height:clamp(34px,4vw,46px);width:auto;max-width:60%;margin:0 auto 20px;display:block;opacity:.85;object-fit:contain}
+#hl .foot-brand{display:flex;align-items:center;gap:16px}
+#hl .foot-logo{height:30px;width:auto;max-width:150px;display:block;opacity:.92;object-fit:contain}
+@media(max-width:600px){#hl .hero-logo{height:44px}#hl .foot-logo{height:24px}#hl .foot-brand{gap:12px}}
+
+/* ---------- proof band under the VSL ---------- */
+#hl .proof{background:var(--coal);border-top:1px solid rgba(176,27,35,.35);padding:clamp(44px,6vw,68px) 0 clamp(38px,5vw,54px);position:relative;overflow:hidden}
+#hl .proof-head{text-align:center;margin-bottom:6px}
+#hl .proof-head .h2{font-size:clamp(24px,3.2vw,38px);margin-top:14px;color:var(--bone)}
+#hl .proof .m-note{margin-top:26px}
+
+/* ---------- transformation marquee ---------- */
+#hl .marquee{position:relative;margin-top:26px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
+#hl .marquee + .marquee{margin-top:16px}
+#hl .mtrack{display:flex;gap:16px;width:max-content;will-change:transform}
+#hl .mtrack.a{animation:hl-slide-a 78s linear infinite}
+#hl .mtrack.b{animation:hl-slide-b 94s linear infinite}
+#hl .marquee:hover .mtrack,#hl .marquee:focus-within .mtrack{animation-play-state:paused}
+@keyframes hl-slide-a{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes hl-slide-b{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+#hl .mcard{flex:0 0 auto;height:230px;border:1px solid var(--line-d);overflow:hidden;background:var(--coal);position:relative}
+#hl .mcard img{height:100%;width:auto;display:block;object-fit:cover}
+#hl .mcard::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red);opacity:0;transition:opacity .3s}
+#hl .mcard:hover::after{opacity:1}
+#hl .m-note{margin-top:22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);text-align:center}
+@media(max-width:700px){#hl .mcard{height:180px}}
+@media (prefers-reduced-motion:reduce){
+  #hl .marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none;scrollbar-width:thin}
+  #hl .mtrack.a,#hl .mtrack.b{animation:none}
+}
+
+/* ---------- manifesto band ---------- */
+#hl .manifesto{background:var(--ink);position:relative;overflow:hidden;padding:clamp(80px,12vw,150px) 0;text-align:center}
+#hl .manifesto::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(60% 100% at 50% 50%,rgba(176,27,35,.22),rgba(10,10,11,0) 72%)}
+#hl .manifesto .wrap{position:relative;z-index:2}
+#hl .manifesto .rulet{width:38px;height:2px;background:var(--red);margin:0 auto 34px}
+#hl .manifesto p{font-family:var(--display);font-weight:700;text-transform:uppercase;
+  font-size:clamp(26px,4.6vw,58px);line-height:1.02;letter-spacing:-.03em;color:var(--bone);max-width:20ch;margin:0 auto}
+#hl .manifesto p em{font-style:normal;font-weight:400;color:var(--red-lt);display:block}
+#hl .manifesto .attrib{margin-top:34px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ash)}
+
+/* ---------- hero client quote band ---------- */
+#hl .bigquote{background:var(--paper);color:var(--ink);padding:clamp(70px,10vw,120px) 0;text-align:center;position:relative}
+#hl .bigquote .rulet{width:38px;height:2px;background:var(--red);margin:0 auto 32px}
+#hl .bigquote blockquote{font-family:var(--display);font-weight:600;
+  font-size:clamp(22px,3.6vw,44px);line-height:1.12;letter-spacing:-.028em;max-width:22ch;margin:0 auto;color:var(--ink)}
+#hl .bigquote blockquote span{color:var(--red)}
+#hl .bigquote footer{margin-top:30px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:#7A7674}
+
+/* ---------- expanded bio ---------- */
+#hl .bio{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,68px);align-items:start;position:relative;z-index:2}
+#hl .bio-media{position:sticky;top:24px}
+#hl .bio-media .photo{aspect-ratio:4/5;margin-bottom:14px}
+#hl .bio-cred{border-top:1px solid var(--line-d)}
+#hl .bio-cred div{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-d);
+  font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase}
+#hl .bio-cred dt{color:var(--ash)}
+#hl .bio-cred dd{color:var(--bone)}
+#hl .bio h3{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.4vw,27px);letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--bone);margin:34px 0 14px}
+#hl .bio p{font-size:15.5px;line-height:1.68;color:var(--mist);max-width:56ch;margin-bottom:15px}
+#hl .bio p strong{color:var(--bone);font-weight:500}
+#hl .bio .kicker{font-family:var(--display);font-weight:600;font-size:clamp(18px,2.1vw,23px);line-height:1.3;
+  letter-spacing:-.015em;color:var(--bone);border-left:2px solid var(--red);padding-left:20px;margin:26px 0}
+@media(max-width:860px){#hl .bio{grid-template-columns:1fr}#hl .bio-media{position:static}#hl .bio-media .photo{aspect-ratio:3/2}}
+
+/* ---------- message screenshots ---------- */
+#hl .msgs{margin-top:24px}
+#hl .msg-row{display:flex;gap:16px;align-items:flex-start;overflow-x:auto;padding:4px 0 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+#hl .msg-row::-webkit-scrollbar{height:6px}
+#hl .msg-row::-webkit-scrollbar-track{background:rgba(237,235,233,.06)}
+#hl .msg-row::-webkit-scrollbar-thumb{background:var(--red)}
+#hl .msgcard{flex:0 0 300px;scroll-snap-align:start;background:#fff;border:1px solid var(--line-d);align-self:flex-start}
+#hl .msgcard img{width:100%;height:auto;display:block}
+@media(max-width:700px){#hl .msgcard{flex:0 0 250px}}
+
+/* ---------- phases ---------- */
+#hl .phases{margin-top:56px;position:relative;z-index:2;border-top:1px solid var(--line-d)}
+#hl .phase{display:grid;grid-template-columns:120px 1fr 1.4fr;gap:clamp(16px,3vw,44px);
+  padding:34px 0;border-bottom:1px solid var(--line-d);align-items:start}
+#hl .phase .pn{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red-lt);padding-top:5px}
+#hl .phase h3{font-family:var(--display);font-weight:700;font-size:clamp(19px,2.2vw,25px);letter-spacing:-.02em;text-transform:uppercase;color:var(--bone);line-height:1.05}
+#hl .phase .wk{display:block;margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+#hl .phase p{font-size:15px;line-height:1.6;color:var(--mist)}
+#hl .phase ul{margin-top:14px;display:grid;gap:8px}
+#hl .phase li{font-size:14px;color:var(--mist);padding-left:18px;position:relative}
+#hl .phase li::before{content:'';position:absolute;left:0;top:9px;width:7px;height:1px;background:var(--red)}
+@media(max-width:820px){#hl .phase{grid-template-columns:1fr;gap:12px;padding:28px 0}#hl .phase .pn{padding-top:0}}
+
+/* ---------- 10-slot video row ---------- */
+#hl .vrow{display:flex;gap:18px;overflow-x:auto;margin-top:48px;padding:4px 0 20px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;position:relative;z-index:2}
+#hl .vrow::-webkit-scrollbar{height:6px}
+#hl .vrow::-webkit-scrollbar-track{background:rgba(237,235,233,.06)}
+#hl .vrow::-webkit-scrollbar-thumb{background:var(--red)}
+#hl .vrow .vcard{flex:0 0 clamp(240px,26vw,300px);scroll-snap-align:start}
+#hl .vhint{margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+
+/* ---------- compare ---------- */
+#hl .compare{display:grid;grid-template-columns:1fr 1fr;margin-top:56px;border-top:1px solid var(--line-l);position:relative;z-index:2}
+#hl .col{padding:38px 40px 42px}
+#hl .col:first-child{border-right:1px solid var(--line-l)}
+#hl .col h3{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;margin-bottom:24px}
+#hl .col:first-child h3{color:#8B8785}
+#hl .col:last-child h3{color:var(--red)}
+#hl .col ul{display:grid;gap:16px}
+#hl .col li{font-size:15.5px;line-height:1.55;padding-left:22px;position:relative;color:#6E6A68}
+#hl .col li::before{content:'';position:absolute;left:0;top:10px;width:9px;height:1px;background:#B3AEAA}
+#hl .col:last-child li{color:var(--ink)}
+#hl .col:last-child li::before{background:var(--red)}
+@media(max-width:800px){#hl .compare{grid-template-columns:1fr}#hl .col{padding:32px 0}#hl .col:first-child{border-right:0;border-bottom:1px solid var(--line-l)}}
+
+/* ---------- day rail ---------- */
+#hl .day .wrap{position:relative;z-index:2}
+#hl .rail{margin-top:64px;position:relative}
+#hl .rail::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,rgba(176,27,35,0),rgba(176,27,35,.75) 8%,rgba(176,27,35,.75) 92%,rgba(176,27,35,0))}
+#hl .tick{display:grid;grid-template-columns:1fr 92px 1fr;align-items:start;padding:26px 0}
+#hl .tick .time{grid-column:2;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--red-lt);padding-top:2px}
+#hl .tick .time::after{content:'';display:block;width:7px;height:7px;margin:12px auto 0;background:var(--red);transform:rotate(45deg)}
+#hl .tick .body{max-width:38ch}
+#hl .tick.left .body{grid-column:1;text-align:right;justify-self:end}
+#hl .tick.right .body{grid-column:3;text-align:left}
+#hl .tick h4{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em;text-transform:uppercase;margin-bottom:7px;color:var(--bone)}
+#hl .tick p{font-size:15px;color:var(--mist);line-height:1.55}
+@media(max-width:800px){
+  #hl .rail::before{left:8px}
+  #hl .tick{grid-template-columns:8px 1fr;gap:0 26px;padding:20px 0}
+  #hl .tick .time{grid-column:1;grid-row:1;text-align:left;transform:translateX(-50%);white-space:nowrap;padding-top:0;position:relative;top:-2px}
+  #hl .tick .time::after{display:none}
+  #hl .tick .body,#hl .tick.left .body,#hl .tick.right .body{grid-column:2;grid-row:1;text-align:left;justify-self:start;max-width:none}
+}
+
+/* ---------- included ---------- */
+#hl .grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:56px;background:var(--line-l);position:relative;z-index:2}
+#hl .card{background:var(--paper);padding:40px 38px 44px}
+#hl .card .num{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--red);display:block;margin-bottom:20px}
+#hl .card h3{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.015em;text-transform:uppercase;margin-bottom:12px;color:var(--ink)}
+#hl .card p{font-size:15px;color:var(--graphite);line-height:1.6}
+@media(max-width:800px){#hl .grid4{grid-template-columns:1fr}#hl .card{padding:32px 26px 36px}}
+
+/* ---------- video testimonials ---------- */
+#hl .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;position:relative;z-index:2}
+@media(max-width:900px){#hl .vgrid{grid-template-columns:1fr 1fr;gap:16px}}
+@media(max-width:620px){#hl .vgrid{grid-template-columns:1fr}}
+#hl .vcard{border:1px solid var(--line-d);background:var(--coal)}
+#hl .vcard .player{aspect-ratio:4/5}
+#hl .vcard .play{width:62px;height:62px}
+#hl .vcard .play svg{width:18px;height:18px}
+#hl .vcard .cap{padding:18px 20px 22px;border-top:1px solid var(--line-d)}
+#hl .vcard .cap b{display:block;font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:-.01em;text-transform:uppercase;color:var(--bone)}
+#hl .vcard .cap .role{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-lt);margin-top:5px}
+#hl .vcard .cap p{margin-top:11px;font-size:14px;line-height:1.55;color:var(--mist)}
+#hl .vcard .runtime{position:absolute;right:14px;bottom:14px;z-index:3;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--bone);background:rgba(10,10,11,.6);padding:4px 8px}
+
+/* ---------- wins ---------- */
+#hl .wins{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;background:var(--line-l);position:relative;z-index:2}
+@media(max-width:900px){#hl .wins{grid-template-columns:1fr}}
+#hl .win{background:var(--paper);padding:34px 30px 32px;display:flex;flex-direction:column}
+#hl .win .metric{font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:-.03em;color:var(--red);line-height:1;margin-bottom:16px}
+#hl .win p{font-size:15px;line-height:1.6;color:#26262A;flex:1}
+#hl .win footer{margin-top:22px;padding-top:16px;border-top:1px solid var(--line-l);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7A7674}
+
+
+/* ---------- long-form quote cards (dark) ---------- */
+#hl .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;position:relative;z-index:2}
+@media(max-width:900px){#hl .qgrid{grid-template-columns:1fr}}
+#hl .qcard{border:1px solid var(--line-d);background:var(--coal);padding:32px 30px 30px;display:flex;flex-direction:column}
+#hl .qcard .mark{width:26px;height:2px;background:var(--red);margin-bottom:22px}
+#hl .qcard p{font-size:15px;line-height:1.62;color:var(--bone);flex:1}
+#hl .qcard p + p{margin-top:12px;color:var(--mist)}
+#hl .qcard footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+#hl .win .metric.sm{font-size:21px;letter-spacing:-.01em;line-height:1.15}
+#hl .win .metric.md{font-size:27px}
+
+/* ---------- coach ---------- */
+#hl .coach .wrap{position:relative;z-index:2}
+#hl .coach-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,72px);align-items:center}
+#hl .photo{aspect-ratio:4/5;background:radial-gradient(80% 60% at 50% 22%,rgba(176,27,35,.32),rgba(10,10,11,1)),var(--coal);border:1px solid var(--line-d);display:flex;align-items:flex-end;padding:22px;background-size:cover;background-position:center}
+#hl .photo span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+#hl .coach blockquote{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.4vw,28px);line-height:1.24;letter-spacing:-.02em;margin:24px 0 26px;max-width:24ch;color:var(--bone);border-left:2px solid var(--red);padding-left:22px}
+#hl .coach p{font-size:15.5px;color:var(--mist);max-width:52ch;margin-bottom:16px}
+#hl .sig{margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ash)}
+@media(max-width:840px){#hl .coach-in{grid-template-columns:1fr}#hl .photo{aspect-ratio:3/2}}
+
+/* ---------- faq ---------- */
+#hl .faq{max-width:820px;margin-top:48px;border-top:1px solid var(--line-l);position:relative;z-index:2}
+#hl details{border-bottom:1px solid var(--line-l)}
+#hl summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;position:relative;font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:-.01em;color:var(--ink)}
+#hl summary::-webkit-details-marker{display:none}
+#hl summary::after{content:'+';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:18px;color:var(--red)}
+#hl details[open] summary::after{content:'\2013'}
+#hl details p{padding:0 44px 28px 0;font-size:15.5px;color:var(--graphite);max-width:66ch}
+
+/* ---------- final ---------- */
+#hl .final{text-align:center;background:var(--ink)}
+#hl .final::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(70% 100% at 50% 100%,rgba(176,27,35,.28),rgba(10,10,11,0) 70%)}
+#hl .final .wrap{position:relative;z-index:2}
+#hl .final .h2{max-width:18ch;margin:18px auto 22px;color:var(--bone)}
+#hl .final p{color:var(--mist);max-width:48ch;margin:0 auto 36px;font-size:16px}
+
+/* ---------- footer band ---------- */
+#hl .foot{background:#060607;color:var(--ash);padding:38px 0;border-top:1px solid rgba(176,27,35,.3)}
+#hl .foot-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+#hl .foot a:hover{color:var(--bone)}
+#hl .foot .links{display:flex;gap:26px;flex-wrap:wrap}
+#hl .disclaimer{margin-top:18px;font-size:11px;letter-spacing:0;text-transform:none;color:#4B484D;max-width:70ch;line-height:1.6}
+</style>
+</head><body style='margin:0'><!-- ===================================================================
+     HYBRID LIFE — GHL BLOCK 2 of 3 : PAGE BODY
+     Paste into: a single full-width Custom Code / HTML element
+     Section settings: full width, padding 0, margin 0, background none
+     No <html>, <head>, <body> tags — this is a fragment on purpose.
+     =================================================================== -->
+
+<div id="hl">
+
+  <!-- ============ HERO + VSL ============ -->
+  <section class="hero" id="hl-top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <img class="hero-logo" src="/assets/logo.png" alt="Hybrid Life Coaching">
+      <p class="eyebrow">100% online &middot; 1:1 hybrid coaching</p>
+      <h1>
+        Level up your body and mind
+        <em>without giving up your life</em>
+      </h1>
+      <p class="sub">You have a business, a job, a calendar full of travel and dinners you're not cancelling. Hybrid coaching builds the body and the mindset around that life instead of asking you to pause it. Watch this first &mdash; six minutes on how it works.</p>
+
+    <div class="player-shell">
+        <!-- SWAP: data-provider = wistia | vimeo | youtube -->
+        <!-- SWAP: data-id = your video ID -->
+        <!-- SWAP: style="--poster:url('https://yourcdn.com/vsl-poster.jpg')" -->
+        <button class="player" type="button"
+                data-provider="wistia"
+                data-id="VIDEO_ID_HERE"
+                data-title="Watch the walkthrough"
+                aria-label="Play the Hybrid Life walkthrough video">
+          <span class="player-fallback" aria-hidden="true"></span>
+          <span class="player-veil" aria-hidden="true"></span>
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="player-meta">
+            <span><strong>Watch the walkthrough</strong>How the coaching actually works</span>
+            <span>06:42</span>
+          </span>
+        </button>
+      </div>
+
+      <ul class="chapters">
+        <li><b>00:00</b> Why plans fail</li>
+        <li><b>01:48</b> The hybrid method</li>
+        <li><b>03:55</b> What you get</li>
+        <li><b>05:30</b> Who this is for</li>
+      </ul>
+
+      <div class="hero-cta">
+        <!-- SWAP: point href at your GHL form step, survey, or calendar link -->
+        <a class="btn btn-solid" href="#hl-apply">Apply for coaching</a>
+        <a class="btn btn-ghost" href="#hl-results">See client results</a>
+      </div>
+      <p class="hero-note">Applications reviewed personally &middot; Limited roster</p>
+    </div>
+  </section>
+
+  <!-- ============ PROOF STRIP (under the VSL) ============ -->
+  <section class="proof">
+    <div class="wrap proof-head">
+      <p class="eyebrow">Client transformations</p>
+      <h2 class="h2">Different jobs. Different families. <em>Same problem.</em></h2>
+    </div>
+    <div class="marquee">
+      <div class="mtrack a">
+        <div class="mcard"><img src="/assets/t-01.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-02.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-03.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-04.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-05.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-06.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-07.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-08.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-09.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-10.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-11.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-12.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-13.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-14.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-01.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-02.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-03.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-04.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-05.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-06.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-07.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-08.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-09.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-10.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-11.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-12.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-13.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-14.jpg" alt="Client transformation" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="marquee">
+      <div class="mtrack b">
+        <div class="mcard"><img src="/assets/t-15.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-16.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-17.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-18.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-19.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-20.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-21.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-22.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-23.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-24.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-25.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-26.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-27.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-28.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-15.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-16.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-17.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-18.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-19.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-20.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-21.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-22.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-23.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-24.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-25.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-26.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-27.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-28.jpg" alt="Client transformation" loading="lazy"></div>
+      </div>
+    </div>
+    <p class="m-note">Business owners &middot; Shift workers &middot; Parents &middot; Frequent travellers &middot; Hover to pause</p>
+  </section>
+
+  <!-- ============ STRIP ============ -->
+  <div class="strip">
+    <div class="strip-in">
+      <div class="stat"><b>1:1</b><span>Never a template</span></div>
+      <div class="stat"><b>7 days</b><span>Coach access, not a portal</span></div>
+      <div class="stat"><b>100%</b><span>Online &mdash; wherever you are</span></div>
+    </div>
+  </div>
+
+  <!-- ============ CLIENT MESSAGES ============ -->
+  <section class="sec light">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Straight from the check-ins</p>
+        <h2 class="h2">The messages <em>that come in</em></h2>
+        <p class="lede">Unedited, apart from removing last names. Scroll sideways to read them.</p>
+      </div>
+      <div class="msgs">
+        <div class="msg-row">
+          <div class="msgcard"><img src="/assets/msg-01.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-02.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-03.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-04.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-05.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-06.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-07.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-08.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-09.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-10.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-11.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-12.jpg" alt="Client check-in message"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METHOD ============ -->
+  <section class="sec light" id="hl-method">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The problem with every plan you've tried</p>
+        <h2 class="h2">Most programs are built for someone <em>with nothing else on</em></h2>
+        <p class="lede">Six meals a day. Ninety minutes under the bar. No dinners out, no red-eyes, no season where the business eats the week. It works right up until your real life shows up — and then it's you who feels like the failure.</p>
+      </div>
+      <div class="compare">
+        <div class="col">
+          <h3>What a standard plan assumes</h3>
+          <ul>
+            <li>You can train 5&ndash;6 days, an hour-plus, at the same time each day</li>
+            <li>Every meal is cooked at home and weighed</li>
+            <li>Travel weeks and work dinners are "off plan" — start again Monday</li>
+            <li>Progress is measured by the scale alone</li>
+            <li>Questions get answered by a chatbot or a Monday form</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>How Hybrid Life is built</h3>
+          <ul>
+            <li>Sessions sized to the day you're having — 40 minutes counts</li>
+            <li>A restaurant and travel playbook written before you need it</li>
+            <li>Calories that cycle with your week instead of ignoring it</li>
+            <li>Body composition, energy, lifts, sleep and mindset — not one number</li>
+            <li>You text your coach. Your coach texts back.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="manifesto">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="rulet"></div>
+      <p>Discipline was never your problem.<em>Your plan just never accounted for your life.</em></p>
+      <p class="attrib">The Hybrid Life principle</p>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO TESTIMONIALS ============ -->
+  <section class="sec" id="hl-stories">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">In their own words</p>
+        <h2 class="h2">Hear it from <em>the people who did it</em></h2>
+        <p class="lede">Unscripted. Recorded on phones, mostly at kitchen tables.</p>
+      </div>
+
+      <div class="vrow">
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_1"
+                  aria-label="Play video testimonial 1">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_2"
+                  aria-label="Play video testimonial 2">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_3"
+                  aria-label="Play video testimonial 3">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_4"
+                  aria-label="Play video testimonial 4">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_5"
+                  aria-label="Play video testimonial 5">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_6"
+                  aria-label="Play video testimonial 6">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_7"
+                  aria-label="Play video testimonial 7">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_8"
+                  aria-label="Play video testimonial 8">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_9"
+                  aria-label="Play video testimonial 9">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+        <div class="vcard">
+          <button class="player" type="button" data-provider="wistia" data-id="VIDEO_ID_10"
+                  aria-label="Play video testimonial 10">
+            <span class="player-fallback" aria-hidden="true"></span>
+            <span class="player-veil" aria-hidden="true"></span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="runtime">00:00</span>
+          </button>
+          <div class="cap">
+            <b>[ First name ]</b>
+            <div class="role">[ Job ] &middot; [ weeks ]</div>
+            <p>[ One line on what this clip covers. ]</p>
+          </div>
+        </div>
+      </div>
+      <p class="vhint">Scroll for more &middot; 10 slots</p>
+    </div>
+  </section>
+
+  <!-- ============ A DAY ============ -->
+  <section class="sec day" id="hl-day">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The proof is in the schedule</p>
+        <h2 class="h2">One ordinary Tuesday, <em>start to finish</em></h2>
+        <p class="lede">Not a highlight reel. A real Tuesday, including the meeting that runs over and the hour after the kids go down. If a plan can't survive those two things, it can't survive your life.</p>
+      </div>
+      <div class="rail">
+        <div class="tick left"><div class="time">05:15</div><div class="body"><h4>Alarm, then water before coffee</h4><p>Sixteen ounces with electrolytes before anything else. You're mildly dehydrated every morning and it reads as tiredness, so we fix that before you diagnose yourself as unmotivated.</p></div></div>
+        <div class="tick right"><div class="time">05:40</div><div class="body"><h4>Lift &mdash; 48 minutes</h4><p>Push day. Every session in your app has a full version and a 25-minute version. You pick based on the day you're actually having, not the day you planned on Sunday.</p></div></div>
+        <div class="tick left"><div class="time">06:35</div><div class="body"><h4>Shower, shake, out</h4><p>Forty grams of protein before you've made a single decision. Breakfast was settled on Sunday so your first willpower spend of the day isn't on food.</p></div></div>
+        <div class="tick right"><div class="time">07:20</div><div class="body"><h4>School run and commute</h4><p>Nothing to manage here. This is the point &mdash; the plan doesn't ask for anything during the part of your morning that belongs to other people.</p></div></div>
+        <div class="tick left"><div class="time">08:30</div><div class="body"><h4>Back-to-back calls</h4><p>Second coffee, and it's the last one. Caffeine after noon costs you sleep, sleep costs you recovery, and recovery is what the training is actually for.</p></div></div>
+        <div class="tick right"><div class="time">10:45</div><div class="body"><h4>The gap between meetings</h4><p>Protein snack from the desk drawer, and a lap of the building. Steps aren't a workout, they're the difference between a 2,400 and 2,700 calorie day without touching your food.</p></div></div>
+        <div class="tick left"><div class="time">12:30</div><div class="body"><h4>Client lunch, steakhouse</h4><p>You order the ribeye and skip the bread basket. The restaurant guide covers this exact situation, so you're not doing arithmetic at the table in front of a prospect.</p></div></div>
+        <div class="tick right"><div class="time">14:10</div><div class="body"><h4>The wall</h4><p>It doesn't arrive today, because your carbs were placed around it rather than eaten at breakfast. Energy is a programming variable, not a personality trait.</p></div></div>
+        <div class="tick left"><div class="time">16:15</div><div class="body"><h4>The meeting runs long</h4><p>Your planned walk disappears. This is the moment most plans break &mdash; and the reason yours has a rule for it: you don't make it up, you don't compensate at dinner, you just carry on. One missed walk is noise, not failure.</p></div></div>
+        <div class="tick right"><div class="time">18:30</div><div class="body"><h4>Dinner with the family</h4><p>Same meal as everyone at the table, portioned for you. Nobody eats grilled chicken out of a container while the rest of the house has something else.</p></div></div>
+        <div class="tick left"><div class="time">20:00</div><div class="body"><h4>Kids down, kitchen quiet</h4><p>The genuinely hard hour. There's a planned snack that fits your numbers waiting for exactly this, because willpower at 8pm on a Tuesday is not a strategy.</p></div></div>
+        <div class="tick right"><div class="time">21:30</div><div class="body"><h4>Check-in submitted</h4><p>Weight, steps, sleep, training, and one line on how the week feels. Two minutes. You wake up to adjustments rather than silence.</p></div></div>
+        <div class="tick left"><div class="time">22:20</div><div class="body"><h4>Lights out</h4><p>Seven and a half hours protected on purpose. Sleep is the cheapest performance input you have and the first one everybody trades away.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INCLUDED ============ -->
+  <section class="sec light" id="hl-included">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Inside the program</p>
+        <h2 class="h2">Everything is built for you, <em>by name</em></h2>
+        <p class="lede">No shared spreadsheets, no recycled PDFs with the last client's name still in the footer.</p>
+      </div>
+      <div class="grid4">
+        <div class="card"><span class="num">01 / Nutrition</span><h3>Your own plan, printed</h3><p>A custom nutrition document built from your TDEE, your training load and your actual preferences — meal blocks, protein rotations, swaps, sauces, grocery list, allergen flags.</p></div>
+        <div class="card"><span class="num">02 / Training</span><h3>Programming that bends</h3><p>Delivered through Trainerize with video, loading targets and a short version of every session for the days that fall apart. Progressive overload survives a bad week.</p></div>
+        <div class="card"><span class="num">03 / Coaching</span><h3>Coaching and mindset</h3><p>Weekly check-ins reviewed by a human, plus messaging in between. We work on the decisions and the self-talk as much as the macros — most clients say the mindset shift is what finally made it stick.</p></div>
+        <div class="card"><span class="num">04 / Protocols</span><h3>The situations, solved</h3><p>Travel, work dinners, weekends, holidays, hydration and the restaurant menu. Written in advance so the hard days already have an answer waiting.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PHASES ============ -->
+  <section class="sec" id="hl-phases">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How the program runs</p>
+        <h2 class="h2">Four phases, <em>in order</em></h2>
+        <p class="lede">Nobody starts at the hardest setting. Each phase earns the next one, so the plan gets more demanding only as your life proves it can hold it.</p>
+      </div>
+
+      <div class="phases">
+        <div class="phase">
+          <div class="pn">Phase 01</div>
+          <div><h3>Audit</h3><span class="wk">Weeks 1&ndash;2</span></div>
+          <div>
+            <p>Before anything changes, we find out what's actually happening. Most people aren't failing their plan — they're on the wrong one for their real energy expenditure.</p>
+            <ul>
+              <li>Full TDEE and intake audit against your actual week</li>
+              <li>Baseline photos, measurements, lifts, sleep and stress</li>
+              <li>Your calendar mapped — travel, dinners, busy seasons</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="pn">Phase 02</div>
+          <div><h3>Build the system</h3><span class="wk">Weeks 3&ndash;8</span></div>
+          <div>
+            <p>The structure goes in. This phase is about making the plan survive a bad week, not about maximum aggression.</p>
+            <ul>
+              <li>Custom nutrition document and training block built around your schedule</li>
+              <li>Restaurant, travel and weekend playbooks written before you need them</li>
+              <li>Weekly check-ins start; we adjust off data, not feel</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="pn">Phase 03</div>
+          <div><h3>Push</h3><span class="wk">Weeks 9&ndash;16</span></div>
+          <div>
+            <p>Now we go after the number you've been stuck at. Calories cycle with your week, training intensity climbs, and the plateau breaks.</p>
+            <ul>
+              <li>Carb cycling and day-type structure matched to training load</li>
+              <li>Progressive overload with a short version of every session</li>
+              <li>Mindset work on the decisions that used to derail you</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="pn">Phase 04</div>
+          <div><h3>Make it permanent</h3><span class="wk">Week 17 onward</span></div>
+          <div>
+            <p>The phase most programs skip, and the reason most results don't last. You leave able to run this yourself.</p>
+            <ul>
+              <li>Calories brought back up deliberately instead of by accident</li>
+              <li>Move from weighing food to portions you can eyeball anywhere</li>
+              <li>You learn the why behind every adjustment, so you can make them alone</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HERO CLIENT QUOTE ============ -->
+  <section class="bigquote">
+    <div class="wrap">
+      <div class="rulet"></div>
+      <blockquote>You taught me I can still reach my goals <span>while still living life.</span></blockquote>
+      <footer>Henry &middot; Coaching client</footer>
+    </div>
+  </section>
+
+  <!-- ============ WINS ============ -->
+  <section class="sec light">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Client wins &middot; real check-in messages</p>
+        <h2 class="h2">Numbers they hadn't seen <em>in years</em></h2>
+        <p class="lede">Almost every client says a version of the same thing: it isn't a number they've never hit. It's a number they'd stopped believing they'd see again.</p>
+      </div>
+      <div class="wins">
+        <div class="win">
+          <div class="metric sm">5 years<br>stuck</div>
+          <p>"I haven't seen 214 in over four or five years, easily. My mindset has gotten stronger and way better as well."</p>
+          <footer>Anthony &middot; Under one month in</footer>
+        </div>
+        <div class="win">
+          <div class="metric">41 lbs</div>
+          <p>"Pre-COVID. That's the last time I was in the 170s. Forty-one pounds down total since working with you."</p>
+          <footer>Bria &middot; Plateau broken</footer>
+        </div>
+        <div class="win">
+          <div class="metric sm">228 lbs<br>&amp; 14-hr days</div>
+          <p>"228.1 this morning. Last time I was in the 220s was end of '24, early '25."</p>
+          <footer>Lief &middot; Full-time work and family</footer>
+        </div>
+        <div class="win">
+          <div class="metric md">205 &rarr; 250</div>
+          <p>"Despite cutting calories, my squat has gone up from 205 to 250 in such a short amount of time. First set at eight reps, first attempt."</p>
+          <footer>David &middot; Strength up while cutting</footer>
+        </div>
+        <div class="win">
+          <div class="metric md">225 &times; 2</div>
+          <p>"First 225 for two since I started your program. Before this, 135 was my max because of a herniated disc a few years back."</p>
+          <footer>Client &middot; Returning from back injury</footer>
+        </div>
+        <div class="win">
+          <div class="metric sm">First 5K<br>ever</div>
+          <p>"Back after the bachelor party and running on fumes, but got the run in and some meal prep beforehand. I've never run a 5K in my life."</p>
+          <footer>Client &middot; First distance run</footer>
+        </div>
+        <div class="win">
+          <div class="metric sm">Lowest<br>since 2019</div>
+          <p>"Weighed in at 232.5. Lowest since 2019."</p>
+          <footer>Marcel &middot; Six-year low</footer>
+        </div>
+        <div class="win">
+          <div class="metric">159.4</div>
+          <p>"I've dieted on my own before and always rebounded before hitting the 150s. After two years I finally did it with your coaching."</p>
+          <footer>Client &middot; Two-year rebound cycle ended</footer>
+        </div>
+        <div class="win">
+          <div class="metric sm">XL &rarr;<br>Medium</div>
+          <p>"217 pounds. Twenty-nine down, and I fit in a medium shirt when I used to be in an XL."</p>
+          <footer>Client &middot; 29 lbs down</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COACH ============ -->
+  <section class="sec coach" id="hl-coach">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:44px">
+        <p class="eyebrow">Your coach</p>
+        <h2 class="h2">Why I built <em>Hybrid Life</em></h2>
+      </div>
+
+      <div class="bio">
+        <div class="bio-media">
+          <!-- SWAP: 4:5 portrait — style="background-image:url('/assets/myles-portrait.jpg')" and delete the span -->
+          <div class="photo" id="hl-portrait"><span>Portrait — 4:5</span></div>
+          <dl class="bio-cred">
+            <div data-cred="coachingSince"><dt>Coaching since</dt><dd></dd></div>
+            <div data-cred="clientsCoached"><dt>Clients coached</dt><dd></dd></div>
+            <div><dt>Format</dt><dd>100% online, 1:1</dd></div>
+            <div data-cred="certifications"><dt>Certifications</dt><dd></dd></div>
+          </dl>
+        </div>
+
+        <div>
+          <p><strong>I'm Myles Harris.</strong> The gym started as an escape for me, not a career. It was the one hour of the day that belonged to me and nobody else, and I got good at it the way people get good at anything they hide inside of. Somewhere along the way I decided that if I was serious, I had to do it the serious way &mdash; and the serious way, as far as I could tell, meant giving up everything else.</p>
+
+          <h3>What I got wrong first</h3>
+          <p>[ The period where you were doing it the hard way, or coaching the way everyone else does. What was the plan you were following or selling, and why did it keep breaking? This is the section people trust, because it's the one nobody fakes. ]</p>
+          <p>So I did. Weighed rice at midnight. Turned down dinners. Carried food to other people's houses. I got lean, and I was miserable, and the worst part was that it worked &mdash; which meant every time it fell apart afterwards, I assumed the problem was me. It took a long stretch of chasing that back and forth before I admitted the plan was the thing that couldn't survive contact with a real life.</p>
+
+          <div class="kicker">Discipline was never your problem. Your plan just never accounted for your life.</div>
+
+          <h3>What changed</h3>
+          <p>What changed was training hybrid &mdash; strength plus real conditioning, the way HYROX made me train. Lifting so I look like I train, conditioning so I can actually use it. And building the nutrition side around the calendar in front of me rather than an ideal week that never arrives. That's the whole idea behind Hybrid Life: a body that's lean and athletic and a life that stays intact around it.</p>
+          <p>I've watched a lot of smart, disciplined people conclude they lack willpower when what they actually lacked was a plan written for their real week. Nobody's failing because they don't want it enough. They're failing because the plan assumed a life they don't have.</p>
+
+          <h3>How I coach now</h3>
+          <p>Everything is 1:1 and everything is built from your numbers — your energy expenditure, your training load, your calendar. No shared spreadsheets, no template with the name swapped. You message me directly and I answer. When your week falls apart, the plan changes that day rather than next Monday.</p>
+          <p>I work with people who are already good at something &mdash; a business, a career, a craft &mdash; and want their body to match the standard they hold everywhere else. I'm not the coach for a six-week shred, and I'm not the cheapest option available. Terms are six or twelve months, because that's how long real change takes and anything shorter just restarts the cycle you're already tired of.</p>
+
+          <p class="sig">Myles Harris &middot; Founder, Hybrid Life Coaching</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec light" id="hl-faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Before you apply</p>
+        <h2 class="h2">The questions <em>everyone asks</em></h2>
+      </div>
+      <div class="faq">
+        <details open><summary>I travel constantly. Is this going to work?</summary><p>It's the reason the program exists. Travel weeks get their own structure — airport and hotel options, a lower-equipment training block, and adjusted targets so a trip is a planned phase rather than a hole in the data.</p></details>
+        <details><summary>How does online coaching actually work?</summary><p>Everything runs through your phone. Training and video demos live in the app, your nutrition plan arrives as a document you can print or keep on screen, check-ins are a short weekly form, and messaging is direct to me. No gym visits, no fixed session times, no time zone problem.</p></details>
+        <details><summary>I eat out and travel constantly for work. Does that ruin it?</summary><p>No — it's planned for. You get a restaurant playbook covering steakhouse, sushi, airport and the place with nothing on the menu, plus a travel structure with hotel and low-equipment training. Work dinners are part of the plan, not a break from it.</p></details>
+        <details><summary>How much time do I need in the gym?</summary><p>Three to four sessions a week, 40&ndash;60 minutes. Every session also has a compressed version for days that collapse. Consistency at 40 minutes outperforms perfection at ninety.</p></details>
+        <details><summary>Do I have to weigh my food?</summary><p>At the start, for a short period, so we're working from real numbers instead of guesses. Most clients move to portion-based eating within the first phase once the calibration is done.</p></details>
+        <details><summary>What does it cost?</summary><p>Pricing depends on the length of the engagement and is covered on the call. Coaching is a considered purchase, and the application exists so neither of us spends time on a bad fit.</p></details>
+        <details><summary>What happens after I apply?</summary><p>You'll answer a short set of questions about your goals, schedule and history. If it looks like a fit, you'll get a link to book a call with me directly. If it isn't, I'll tell you that and point you somewhere better.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="sec final" id="hl-apply">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <img class="final-logo" src="/assets/logo.png" alt="">
+      <p class="eyebrow">Applications open</p>
+      <h2 class="h2">Level up the body and the mind <em>without giving up the life</em></h2>
+      <p>Tell me about your goals and your schedule. If I can help, we'll get on a call. If I can't, I'll say so.</p>
+      <!-- SWAP: link to your GHL form/survey step or calendar. Do NOT hand-code the form. -->
+      <a class="btn btn-solid" href="#hl-form">Start your application</a>
+      <a class="btn btn-ghost" href="/booking" style="margin-left:12px">Or book a call directly</a>
+      
+      <!-- ============ GHL APPLICATION FORM ============ -->
+      <div id="hl-form" class="hl-embed-wrap">
+        <div id="hl-embed-slot"
+             data-fallback-href="/booking"
+             class="hl-embed"></div>
+        <p class="hero-note" style="margin-top:18px">
+          Applications are reviewed the same day &middot; No payment required to apply
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER BAND ============ -->
+  <div class="foot">
+    <div class="foot-in">
+      <div class="foot-brand">
+        <img class="foot-logo" src="/assets/logo.png" alt="Hybrid Life Coaching">
+        <span>&copy; 2026 Hybrid Life Coaching</span>
+      </div>
+      <div class="links">
+        <a href="https://www.instagram.com/mylesharrisfit" target="_blank" rel="noopener">Instagram</a>
+        <a href="/privacy">Privacy policy</a>
+        <a href="/terms">Terms of service</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="disclaimer">Results shown are individual client outcomes shared with permission and are not a guarantee of results. Coaching is not medical advice; consult your physician before beginning any nutrition or training program.</p>
+    </div>
+  </div>
+
+</div>
+<!-- ===================================================================
+     HYBRID LIFE — GHL BLOCK 3 of 3 : FOOTER CODE
+     Paste into: Settings → Custom Code → Footer Tracking Code
+     (or Page Settings → Custom Code → Footer, for one page only)
+     Must load AFTER the body markup. Footer placement handles that.
+     =================================================================== -->
+
+<script>
+(function(){
+  function init(){
+    var root = document.getElementById('hl');
+    if(!root || root.dataset.hlReady) return;
+    root.dataset.hlReady = '1';
+
+    /* ---- click-to-load video facades ---- */
+    var SRC = {
+      wistia:  function(id){ return 'https://fast.wistia.net/embed/iframe/'+id+'?autoPlay=true'; },
+      vimeo:   function(id){ return 'https://player.vimeo.com/video/'+id+'?autoplay=1&title=0&byline=0&portrait=0'; },
+      youtube: function(id){ return 'https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1'; }
+    };
+
+    root.querySelectorAll('.player').forEach(function(p){
+      p.addEventListener('click', function(e){
+        e.preventDefault();
+        var prov = p.dataset.provider, id = p.dataset.id;
+        if(!SRC[prov] || !id || id.indexOf('VIDEO_ID') === 0) return; /* no ID set yet */
+        var f = document.createElement('iframe');
+        f.src = SRC[prov](id);
+        f.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
+        f.setAttribute('allowfullscreen','');
+        f.title = p.dataset.title || 'Video';
+        p.innerHTML = '';
+        p.appendChild(f);
+        p.style.cursor = 'default';
+
+        /* conversion tracking */
+        if(window.dataLayer){ window.dataLayer.push({event:'vsl_play', video_id:id}); }
+        if(window.fbq){ fbq('trackCustom','VSLPlay',{video_id:id}); }
+      });
+    });
+
+    /* ---- apply-button conversion events ---- */
+    root.querySelectorAll('a.btn-solid').forEach(function(a){
+      a.addEventListener('click', function(){
+        if(window.fbq){ fbq('track','Lead',{content_name:'apply_click'}); }
+        if(window.dataLayer){ window.dataLayer.push({event:'apply_click'}); }
+      });
+    });
+
+    /* ---- scroll-depth: tells you where people quit ---- */
+    (function(){
+      var hit={};
+      window.addEventListener('scroll', function(){
+        var pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+        [25,50,75,90].forEach(function(m){
+          if(pct >= m && !hit[m]){
+            hit[m]=1;
+            if(window.dataLayer){ window.dataLayer.push({event:'scroll_depth', depth:m}); }
+          }
+        });
+      }, {passive:true});
+    })();
+
+    /* ---- before / after slider ---- */
+    root.querySelectorAll('.ba').forEach(function(ba){
+      var dragging = false;
+      function set(pct){
+        pct = Math.max(0, Math.min(100, pct));
+        ba.style.setProperty('--split', pct + '%');
+        ba.setAttribute('aria-valuenow', Math.round(pct));
+      }
+      function fromEvent(e){
+        var r = ba.getBoundingClientRect();
+        var cx = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
+        set(((cx - r.left) / r.width) * 100);
+      }
+      ba.addEventListener('pointerdown', function(e){
+        dragging = true;
+        if(ba.setPointerCapture){ ba.setPointerCapture(e.pointerId); }
+        fromEvent(e);
+      });
+      ba.addEventListener('pointermove', function(e){ if(dragging) fromEvent(e); });
+      ba.addEventListener('pointerup', function(){ dragging = false; });
+      ba.addEventListener('pointercancel', function(){ dragging = false; });
+      ba.addEventListener('keydown', function(e){
+        var cur = parseFloat(ba.getAttribute('aria-valuenow')) || 50;
+        if(e.key === 'ArrowLeft'){ set(cur - 4); e.preventDefault(); }
+        if(e.key === 'ArrowRight'){ set(cur + 4); e.preventDefault(); }
+        if(e.key === 'Home'){ set(0); e.preventDefault(); }
+        if(e.key === 'End'){ set(100); e.preventDefault(); }
+      });
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  /* GHL sometimes re-renders sections after load — retry once */
+  setTimeout(init, 1200);
+})();
+</script>
+<script src="/site.js"></script>
+</body>
+</html>
