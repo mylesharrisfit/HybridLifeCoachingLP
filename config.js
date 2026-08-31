@@ -30,11 +30,10 @@ window.HL = {
 
 
   /* ── VIDEO ─────────────────────────────────────────────────
-     Provider for all videos: "wistia" | "vimeo" | "youtube"
-     VSL id: for wistia.com/medias/abc123xyz the id is abc123xyz
+     Provider for the testimonial videos:
+     "wistia" | "vimeo" | "youtube"
      ───────────────────────────────────────────────────────── */
   videoProvider: "wistia",
-  vslId: "",
 
 
   /* ── TRACKING ──────────────────────────────────────────────

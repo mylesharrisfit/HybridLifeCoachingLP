@@ -18,8 +18,7 @@ sensible fallback, rather than rendering an empty box or a dead script.
 ```js
 window.HL = {
   applicationFormUrl: "",   // GHL form embed src
-  calendarUrl: "",          // GHL calendar embed src
-  vslId: "",                // Wistia/Vimeo/YouTube id for the VSL
+  calendarUrl: "",          // GHL calendar embed src (/booking page)
   metaPixelId: "",          // Meta pixel
   ga4Id: "",                // GA4
   ...
@@ -53,8 +52,9 @@ GHL → **Calendars** → your calendar → **Share → Embed** → copy the `sr
 https://api.leadconnectorhq.com/widget/booking/abc123XYZ
 ```
 
-Paste it into `calendarUrl`. It renders at **/booking**, which is where the
-"Book a call directly" button and the `/call` and `/book` shortcuts go.
+Paste it into `calendarUrl`. It renders at **/booking**, reachable via the
+`/call` and `/book` shortcuts. The landing page itself no longer links to it —
+all page CTAs go to the application form.
 
 Suggested flow: cold traffic → application form → GHL workflow sends the calendar
 link on qualification. Warm traffic (DMs, referrals) → straight to `/booking`.
@@ -79,8 +79,8 @@ Clean URLs are handled in `vercel.json` — no `.html` in any link.
 ## Still to fill in
 
 - [ ] `applicationFormUrl` and `calendarUrl` in `config.js`
-- [ ] `vslId` — upload the VSL to Wistia, paste the id
-- [ ] VSL chapter timestamps in `index.html` (currently 00:00 / 01:48 / 03:55 / 05:30, runtime 06:42)
+- [ ] `/assets/hero.jpg` — the hero image (16:9). Until it exists the hero
+      shows a dark gradient in its place
 - [ ] Video testimonials — 10 slots in the `#hl-stories` section. **The whole
       section auto-hides while every slot is empty**, so nothing broken shows.
       To use one: replace `VIDEO_ID_1` with a real id and fill in the name, job,
@@ -95,9 +95,6 @@ Clean URLs are handled in `vercel.json` — no `.html` in any link.
 - [ ] Lawyer review of `privacy.html` and `terms.html` before production
 - [ ] Written consent from every named client and every face in a transformation photo
 
-The bio section is a **draft** written from your own origin story. Read it as
-yours or rewrite it — it's the section people decide on.
-
 ---
 
 ## Tracking events
@@ -108,7 +105,7 @@ Already wired in the page script, firing only when the IDs exist:
 |---|---|
 | `PageView` | load |
 | `Lead` | any solid CTA click |
-| `VSLPlay` | video start |
+| `VSLPlay` | testimonial video start |
 | scroll depth | 25 / 50 / 75 / 90% |
 
 Scroll depth is the useful one — it tells you which section people quit at.

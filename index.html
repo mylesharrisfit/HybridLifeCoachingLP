@@ -153,6 +153,9 @@
 
 #hl .player-shell{max-width:1000px;margin:clamp(38px,5vw,56px) auto 0;position:relative}
 #hl .player-shell::before{content:'';position:absolute;inset:-1px;border:1px solid rgba(176,27,35,.55);pointer-events:none;z-index:4}
+#hl .hero-media{aspect-ratio:16/9;width:100%;
+  background:url('/assets/hero.jpg') center/cover no-repeat,
+    radial-gradient(70% 60% at 50% 40%,rgba(176,27,35,.28),rgba(10,10,11,1) 78%),var(--coal)}
 #hl .player{position:relative;aspect-ratio:16/9;background:var(--coal);cursor:pointer;overflow:hidden;width:100%;display:block;padding:0;border:0}
 #hl .player::after{content:'';position:absolute;inset:0;background-image:var(--poster,none);background-size:cover;background-position:center;z-index:0}
 #hl .player-veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,10,11,.25) 0%,rgba(10,10,11,.55) 65%,rgba(10,10,11,.8) 100%)}
@@ -164,12 +167,6 @@
 #hl .player-meta{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:20px clamp(16px,3vw,28px);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);text-align:left}
 #hl .player-meta strong{color:var(--bone);font-weight:500;display:block;margin-bottom:5px;letter-spacing:.1em}
 #hl .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
-
-#hl .chapters{display:flex;flex-wrap:wrap;justify-content:center;margin-top:22px;border-top:1px solid var(--line-d)}
-#hl .chapters li{padding:16px 26px;border-right:1px solid var(--line-d);font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mist)}
-#hl .chapters li:last-child{border-right:0}
-#hl .chapters b{color:var(--red-lt);font-weight:500;margin-right:10px}
-@media(max-width:700px){#hl .chapters li{padding:13px 16px;font-size:9.5px}}
 
 #hl .hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:36px}
 #hl .hero-note{margin-top:22px;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ash)}
@@ -441,38 +438,17 @@
         Level up your body and mind
         <em>without giving up your life</em>
       </h1>
-      <p class="sub">You have a business, a job, a calendar full of travel and dinners you're not cancelling. Hybrid coaching builds the body and the mindset around that life instead of asking you to pause it. Watch this first &mdash; six minutes on how it works.</p>
+      <p class="sub">You have a business, a job, a calendar full of travel and dinners you're not cancelling. Hybrid coaching builds the body and the mindset around that life instead of asking you to pause it.</p>
 
     <div class="player-shell">
-        <!-- SWAP: data-provider = wistia | vimeo | youtube -->
-        <!-- SWAP: data-id = your video ID -->
-        <!-- SWAP: style="--poster:url('https://yourcdn.com/vsl-poster.jpg')" -->
-        <button class="player" type="button"
-                data-provider="wistia"
-                data-id="VIDEO_ID_HERE"
-                data-title="Watch the walkthrough"
-                aria-label="Play the Hybrid Life walkthrough video">
-          <span class="player-fallback" aria-hidden="true"></span>
-          <span class="player-veil" aria-hidden="true"></span>
-          <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="player-meta">
-            <span><strong>Watch the walkthrough</strong>How the coaching actually works</span>
-            <span>06:42</span>
-          </span>
-        </button>
+        <!-- SWAP: drop your hero photo at /assets/hero.jpg and it appears here automatically -->
+        <div class="hero-media" role="img" aria-label="Hybrid Life Coaching"></div>
       </div>
-
-      <ul class="chapters">
-        <li><b>00:00</b> Why plans fail</li>
-        <li><b>01:48</b> The hybrid method</li>
-        <li><b>03:55</b> What you get</li>
-        <li><b>05:30</b> Who this is for</li>
-      </ul>
 
       <div class="hero-cta">
         <!-- SWAP: point href at your GHL form step, survey, or calendar link -->
         <a class="btn btn-solid" href="#hl-apply">Apply for coaching</a>
-        <a class="btn btn-ghost" href="#hl-results">See client results</a>
+        <a class="btn btn-ghost" href="#hl-stories">See client results</a>
       </div>
       <p class="hero-note">Applications reviewed personally &middot; Limited roster</p>
     </div>
@@ -617,16 +593,6 @@
           </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ MANIFESTO ============ -->
-  <section class="manifesto">
-    <div class="grain" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="rulet"></div>
-      <p>Discipline was never your problem.<em>Your plan just never accounted for your life.</em></p>
-      <p class="attrib">The Hybrid Life principle</p>
     </div>
   </section>
 
@@ -786,6 +752,16 @@
     </div>
   </section>
 
+  <!-- ============ MANIFESTO ============ -->
+  <section class="manifesto">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="rulet"></div>
+      <p>Discipline was never your problem.<em>Your plan just never accounted for your life.</em></p>
+      <p class="attrib">The Hybrid Life principle</p>
+    </div>
+  </section>
+
   <!-- ============ A DAY ============ -->
   <section class="sec day" id="hl-day">
     <div class="grain" aria-hidden="true"></div>
@@ -809,23 +785,6 @@
         <div class="tick left"><div class="time">20:00</div><div class="body"><h4>Kids down, kitchen quiet</h4><p>The genuinely hard hour. There's a planned snack that fits your numbers waiting for exactly this, because willpower at 8pm on a Tuesday is not a strategy.</p></div></div>
         <div class="tick right"><div class="time">21:30</div><div class="body"><h4>Check-in submitted</h4><p>Weight, steps, sleep, training, and one line on how the week feels. Two minutes. You wake up to adjustments rather than silence.</p></div></div>
         <div class="tick left"><div class="time">22:20</div><div class="body"><h4>Lights out</h4><p>Seven and a half hours protected on purpose. Sleep is the cheapest performance input you have and the first one everybody trades away.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ INCLUDED ============ -->
-  <section class="sec light" id="hl-included">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Inside the program</p>
-        <h2 class="h2">Everything is built for you, <em>by name</em></h2>
-        <p class="lede">No shared spreadsheets, no recycled PDFs with the last client's name still in the footer.</p>
-      </div>
-      <div class="grid4">
-        <div class="card"><span class="num">01 / Nutrition</span><h3>Your own plan, printed</h3><p>A custom nutrition document built from your TDEE, your training load and your actual preferences — meal blocks, protein rotations, swaps, sauces, grocery list, allergen flags.</p></div>
-        <div class="card"><span class="num">02 / Training</span><h3>Programming that bends</h3><p>Delivered through Trainerize with video, loading targets and a short version of every session for the days that fall apart. Progressive overload survives a bad week.</p></div>
-        <div class="card"><span class="num">03 / Coaching</span><h3>Coaching and mindset</h3><p>Weekly check-ins reviewed by a human, plus messaging in between. We work on the decisions and the self-talk as much as the macros — most clients say the mindset shift is what finally made it stick.</p></div>
-        <div class="card"><span class="num">04 / Protocols</span><h3>The situations, solved</h3><p>Travel, work dinners, weekends, holidays, hydration and the restaurant menu. Written in advance so the hard days already have an answer waiting.</p></div>
       </div>
     </div>
   </section>
@@ -893,15 +852,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ HERO CLIENT QUOTE ============ -->
-  <section class="bigquote">
-    <div class="wrap">
-      <div class="rulet"></div>
-      <blockquote>You taught me I can still reach my goals <span>while still living life.</span></blockquote>
-      <footer>Henry &middot; Coaching client</footer>
     </div>
   </section>
 
@@ -985,21 +935,18 @@
         </div>
 
         <div>
-          <p><strong>I'm Myles Harris.</strong> The gym started as an escape for me, not a career. It was the one hour of the day that belonged to me and nobody else, and I got good at it the way people get good at anything they hide inside of. Somewhere along the way I decided that if I was serious, I had to do it the serious way &mdash; and the serious way, as far as I could tell, meant giving up everything else.</p>
+          <p><strong>Seven years ago, I started posting my fitness journey every single day.</strong></p>
+          <p>At the time, I had no idea where it would lead. I was bouncing between jobs, trying different businesses, and searching for something I could truly build my life around. The one thing I always came back to was fitness.</p>
+          <p>But my relationship with fitness wasn't always healthy.</p>
+          <p>For years, I trained like a bodybuilder and built my entire life around the gym. No balance. No real structure. Eating out made me feel guilty. Missing a workout felt like failure. I could be in great shape physically while mentally feeling completely lost.</p>
+          <p>There were periods where I was depressed, uncertain about my future, and putting everything I had into becoming better physically because it was one of the few things I felt like I could control.</p>
 
-          <h3>What I got wrong first</h3>
-          <p>[ The period where you were doing it the hard way, or coaching the way everyone else does. What was the plan you were following or selling, and why did it keep breaking? This is the section people trust, because it's the one nobody fakes. ]</p>
-          <p>So I did. Weighed rice at midnight. Turned down dinners. Carried food to other people's houses. I got lean, and I was miserable, and the worst part was that it worked &mdash; which meant every time it fell apart afterwards, I assumed the problem was me. It took a long stretch of chasing that back and forth before I admitted the plan was the thing that couldn't survive contact with a real life.</p>
+          <div class="kicker">Eventually, I realized I didn't want fitness to be my entire life. I wanted fitness to make my life better.</div>
 
-          <div class="kicker">Discipline was never your problem. Your plan just never accounted for your life.</div>
-
-          <h3>What changed</h3>
-          <p>What changed was training hybrid &mdash; strength plus real conditioning, the way HYROX made me train. Lifting so I look like I train, conditioning so I can actually use it. And building the nutrition side around the calendar in front of me rather than an ideal week that never arrives. That's the whole idea behind Hybrid Life: a body that's lean and athletic and a life that stays intact around it.</p>
-          <p>I've watched a lot of smart, disciplined people conclude they lack willpower when what they actually lacked was a plan written for their real week. Nobody's failing because they don't want it enough. They're failing because the plan assumed a life they don't have.</p>
-
-          <h3>How I coach now</h3>
-          <p>Everything is 1:1 and everything is built from your numbers — your energy expenditure, your training load, your calendar. No shared spreadsheets, no template with the name swapped. You message me directly and I answer. When your week falls apart, the plan changes that day rather than next Monday.</p>
-          <p>I work with people who are already good at something &mdash; a business, a career, a craft &mdash; and want their body to match the standard they hold everywhere else. I'm not the coach for a six-week shred, and I'm not the cheapest option available. Terms are six or twelve months, because that's how long real change takes and anything shorter just restarts the cycle you're already tired of.</p>
+          <p>That's when I discovered hybrid training and everything started to change.</p>
+          <p>I learned how to lift, run, eat, travel, go out, build a business, and still make progress &mdash; without the constant guilt of feeling like I was doing something wrong.</p>
+          <p>And after seven years of documenting my own journey, that became the foundation of Hybrid Life Coaching.</p>
+          <p><strong>You shouldn't have to choose between being in incredible shape and actually enjoying your life. The goal is to build both.</strong></p>
 
           <p class="sig">Myles Harris &middot; Founder, Hybrid Life Coaching</p>
         </div>
@@ -1034,14 +981,12 @@
       <p class="eyebrow">Applications open</p>
       <h2 class="h2">Level up the body and the mind <em>without giving up the life</em></h2>
       <p>Tell me about your goals and your schedule. If I can help, we'll get on a call. If I can't, I'll say so.</p>
-      <!-- SWAP: link to your GHL form/survey step or calendar. Do NOT hand-code the form. -->
+      <!-- SWAP: link to your GHL application form. Do NOT hand-code the form. -->
       <a class="btn btn-solid" href="#hl-form">Start your application</a>
-      <a class="btn btn-ghost" href="/booking" style="margin-left:12px">Or book a call directly</a>
-      
+
       <!-- ============ GHL APPLICATION FORM ============ -->
       <div id="hl-form" class="hl-embed-wrap">
         <div id="hl-embed-slot"
-             data-fallback-href="/booking"
              class="hl-embed"></div>
         <p class="hero-note" style="margin-top:18px">
           Applications are reviewed the same day &middot; No payment required to apply

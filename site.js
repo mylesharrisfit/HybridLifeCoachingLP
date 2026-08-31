@@ -38,17 +38,16 @@
     }
 
     /* No form URL configured yet — show something honest instead
-       of an empty box, and keep the CTA reachable. */
+       of an empty box. */
     slot.style.minHeight = "0";
     slot.innerHTML =
       '<div class="hl-embed-note">' +
       '<p class="eyebrow">Application</p>' +
       "<p>The application form isn't connected yet. Add your GoHighLevel " +
       "form URL to <code>config.js</code> and it will appear here " +
-      "automatically.</p>" +
-      '<a class="btn btn-solid" href="' +
-      (slot.dataset.fallbackHref || "/booking") +
-      '">Book a call instead</a>' +
+      "automatically. In the meantime, email " +
+      '<a href="mailto:' + (C.email || "") + '" style="color:var(--red-lt)">' +
+      (C.email || "") + "</a>.</p>" +
       "</div>";
   }
 
@@ -77,17 +76,12 @@
       "</div>";
   }
 
-  /* ---- VSL + testimonial slots ---- */
+  /* ---- testimonial video slots ---- */
   function wireVideo() {
     var root = document.getElementById("hl");
     if (!root) return;
 
     root.querySelectorAll(".player").forEach(function (p) {
-      /* Push the VSL id in from config rather than editing markup */
-      if (p.dataset.id === "VIDEO_ID_HERE" && C.vslId) {
-        p.dataset.id = C.vslId;
-        if (C.videoProvider) p.dataset.provider = C.videoProvider;
-      }
       if (C.videoProvider && p.dataset.id && p.dataset.id.indexOf("VIDEO_ID") !== 0) {
         p.dataset.provider = p.dataset.provider || C.videoProvider;
       }
