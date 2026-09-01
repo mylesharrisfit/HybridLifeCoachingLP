@@ -78,7 +78,7 @@ Clean URLs are handled in `vercel.json` — no `.html` in any link.
 
 ## Still to fill in
 
-- [ ] `applicationFormUrl` and `calendarUrl` in `config.js`
+- [x] `applicationFormUrl` and `calendarUrl` in `config.js` — connected
 - [ ] `/assets/hero.jpg` — the hero image (16:9). Until it exists the hero
       shows a dark gradient in its place
 - [ ] Video testimonials — 10 slots in the `#hl-stories` section. **The whole
