@@ -21,8 +21,8 @@ window.HL = {
        Looks like:
        https://api.leadconnectorhq.com/widget/booking/XXXXXXXXXXXX
      ───────────────────────────────────────────────────────── */
-  applicationFormUrl: "",
-  calendarUrl: "",
+  applicationFormUrl: "https://api.leadconnectorhq.com/widget/form/dcC5EhPxcmJNE0Ut2sRC",
+  calendarUrl: "https://api.leadconnectorhq.com/widget/booking/3hM9N4v7azJwnwqmbTci",
 
   /* Height in px for each embed. Bump if GHL scrolls internally. */
   formHeight: 900,
