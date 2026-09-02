@@ -8,24 +8,20 @@
 
 window.HL = {
 
-  /* ── GO HIGH LEVEL ─────────────────────────────────────────
+  /* ── APPLICATION FORM + CALENDAR ───────────────────────────
      applicationFormUrl
-       GHL → Sites → Forms → your application form → Integrate
-       → Embed → copy the iframe `src`.
-       Looks like:
-       https://api.leadconnectorhq.com/widget/form/XXXXXXXXXXXX
+       Any embeddable form URL. Currently the Typeform
+       application; a GHL form embed src also works.
 
      calendarUrl
        GHL → Calendars → your calendar → Share → Embed
-       → copy the iframe `src`.
-       Looks like:
-       https://api.leadconnectorhq.com/widget/booking/XXXXXXXXXXXX
+       → copy the iframe `src`. Renders at /booking.
      ───────────────────────────────────────────────────────── */
-  applicationFormUrl: "https://api.leadconnectorhq.com/widget/form/dcC5EhPxcmJNE0Ut2sRC",
+  applicationFormUrl: "https://form.typeform.com/to/hy1Nv6Og",
   calendarUrl: "https://api.leadconnectorhq.com/widget/booking/3hM9N4v7azJwnwqmbTci",
 
-  /* Height in px for each embed. Bump if GHL scrolls internally. */
-  formHeight: 900,
+  /* Height in px for each embed. Bump if the form scrolls internally. */
+  formHeight: 700,
   calendarHeight: 780,
 
 
@@ -34,6 +30,21 @@ window.HL = {
      "wistia" | "vimeo" | "youtube"
      ───────────────────────────────────────────────────────── */
   videoProvider: "wistia",
+
+  /* ── VIDEO TESTIMONIALS ────────────────────────────────────
+     One entry per clip — the section renders itself as a grid,
+     nine at a time behind a "Load more" button, and videos only
+     load when clicked, so any number of clips stays fast.
+
+       { id: "abc123", name: "Anthony",
+         role: "Business owner · 16 weeks",
+         caption: "Down 41 lbs while travelling.",
+         provider: "youtube" }   // provider optional,
+                                 // defaults to videoProvider
+
+     While this list is empty the whole section stays hidden.
+     ───────────────────────────────────────────────────────── */
+  testimonialVideos: [],
 
 
   /* ── TRACKING ──────────────────────────────────────────────

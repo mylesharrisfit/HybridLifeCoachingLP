@@ -78,13 +78,15 @@ Clean URLs are handled in `vercel.json` — no `.html` in any link.
 
 ## Still to fill in
 
-- [x] `applicationFormUrl` and `calendarUrl` in `config.js` — connected
+- [x] `applicationFormUrl` — the Typeform application is connected
+- [x] `calendarUrl` — the GHL booking calendar is connected
 - [ ] `/assets/hero.jpg` — the hero image (16:9). Until it exists the hero
       shows a dark gradient in its place
-- [ ] Video testimonials — 10 slots in the `#hl-stories` section. **The whole
-      section auto-hides while every slot is empty**, so nothing broken shows.
-      To use one: replace `VIDEO_ID_1` with a real id and fill in the name, job,
-      weeks and caption around it.
+- [ ] Video testimonials — add entries to `testimonialVideos` in `config.js`
+      (id, name, role, caption, optional provider). Any number of clips: the
+      section renders as a grid, nine at a time behind a Load-more button, and
+      each video only loads when clicked. **The whole section auto-hides while
+      the list is empty**, so nothing broken shows.
 - [ ] `coachingSince`, `clientsCoached`, `certifications` in `config.js` —
       each row hides itself until filled
 - [ ] `portraitImage` — 4:5 portrait into `/assets`, path into `config.js`
