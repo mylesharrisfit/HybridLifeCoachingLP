@@ -24,56 +24,126 @@
     return f;
   }
 
-  /* ---- GHL application form (home page) ---- */
+  /* ---- application-gate state ----
+     The Step 2 calendar on the home page stays locked until the
+     Typeform is submitted. Submission is remembered per visitor so
+     returning applicants keep access. /booking is never gated. */
+  function hasApplied() {
+    try { return localStorage.getItem("hl_applied") === "1"; } catch (e) { return false; }
+  }
+  function markApplied() {
+    try { localStorage.setItem("hl_applied", "1"); } catch (e) {}
+    unlockCalendar(true);
+  }
+  function calendarIframe() {
+    return iframeFor(C.calendarUrl, C.calendarHeight || 780, "Book a call");
+  }
+  function unlockCalendar(scroll) {
+    var book = document.getElementById("hl-book");
+    var slot = book && book.querySelector("#hl-calendar-slot");
+    if (!slot || !C.calendarUrl || slot.querySelector("iframe")) return;
+    slot.innerHTML = "";
+    slot.appendChild(calendarIframe());
+    slot.style.minHeight = (C.calendarHeight || 780) + "px";
+    if (scroll && book.scrollIntoView) book.scrollIntoView({ behavior: "smooth" });
+  }
+
+  /* ---- application form (home page) ---- */
   function renderForm() {
     var slot = document.getElementById("hl-embed-slot");
     if (!slot) return;
 
-    if (C.applicationFormUrl) {
-      slot.appendChild(
-        iframeFor(C.applicationFormUrl, C.formHeight || 900, "Coaching application")
-      );
-      slot.style.minHeight = (C.formHeight || 900) + "px";
+    if (!C.applicationFormUrl) {
+      slot.style.minHeight = "0";
+      slot.innerHTML =
+        '<div class="hl-embed-note">' +
+        '<p class="eyebrow">Application</p>' +
+        "<p>The application form isn't connected yet. Add your form " +
+        "URL to <code>config.js</code> and it will appear here " +
+        "automatically. In the meantime, email " +
+        '<a href="mailto:' + (C.email || "") + '" style="color:var(--red-lt)">' +
+        (C.email || "") + "</a>.</p>" +
+        "</div>";
       return;
     }
 
-    /* No form URL configured yet — show something honest instead
-       of an empty box. */
-    slot.style.minHeight = "0";
-    slot.innerHTML =
-      '<div class="hl-embed-note">' +
-      '<p class="eyebrow">Application</p>' +
-      "<p>The application form isn't connected yet. Add your GoHighLevel " +
-      "form URL to <code>config.js</code> and it will appear here " +
-      "automatically. In the meantime, email " +
-      '<a href="mailto:' + (C.email || "") + '" style="color:var(--red-lt)">' +
-      (C.email || "") + "</a>.</p>" +
-      "</div>";
+    var height = C.formHeight || 700;
+    slot.style.minHeight = height + "px";
+
+    function plainIframe() {
+      if (slot.querySelector("iframe")) return;
+      slot.appendChild(iframeFor(C.applicationFormUrl, height, "Coaching application"));
+    }
+
+    /* Typeform: prefer the official embed so we get a reliable
+       submit event to unlock Step 2 with. Anything else (or the
+       embed script failing to load) falls back to a plain iframe
+       plus a postMessage listener. */
+    var tfMatch = C.applicationFormUrl.match(/typeform\.com\/to\/([A-Za-z0-9_-]+)/);
+    if (tfMatch) {
+      slot.style.height = height + "px";
+      var s = document.createElement("script");
+      s.src = "https://embed.typeform.com/next/embed.js";
+      s.onload = function () {
+        if (window.tf && window.tf.createWidget) {
+          window.tf.createWidget(tfMatch[1], {
+            container: slot,
+            width: "100%",
+            height: height,
+            onSubmit: markApplied,
+          });
+        } else {
+          plainIframe();
+        }
+      };
+      s.onerror = plainIframe;
+      document.head.appendChild(s);
+    } else {
+      plainIframe();
+    }
+
+    /* Fallback submit signal from an iframe'd Typeform. */
+    window.addEventListener("message", function (ev) {
+      var t = ev && ev.data && ev.data.type;
+      var okOrigin = typeof ev.origin === "string" &&
+        (ev.origin.indexOf("typeform.com") !== -1 || ev.origin === window.location.origin);
+      if (okOrigin && (t === "form-submit" || t === "form_submit")) markApplied();
+    });
   }
 
-  /* ---- GHL calendar (/booking page) ---- */
+  /* ---- GHL calendar (/booking page + gated home-page Step 2) ---- */
   function renderCalendar() {
     var slot = document.getElementById("hl-calendar-slot");
     if (!slot) return;
 
-    if (C.calendarUrl) {
-      slot.appendChild(
-        iframeFor(C.calendarUrl, C.calendarHeight || 780, "Book a call")
-      );
-      slot.style.minHeight = (C.calendarHeight || 780) + "px";
+    if (!C.calendarUrl) {
+      slot.style.minHeight = "0";
+      slot.innerHTML =
+        '<div class="hl-embed-note">' +
+        '<p class="eyebrow">Booking</p>' +
+        "<p>The calendar isn't connected yet. Add your GoHighLevel calendar " +
+        "URL to <code>config.js</code> and it will appear here " +
+        "automatically. In the meantime, email " +
+        '<a href="mailto:' + (C.email || "") + '" style="color:var(--red-lt)">' +
+        (C.email || "") + "</a>.</p>" +
+        "</div>";
       return;
     }
 
-    slot.style.minHeight = "0";
-    slot.innerHTML =
-      '<div class="hl-embed-note">' +
-      '<p class="eyebrow">Booking</p>' +
-      "<p>The calendar isn't connected yet. Add your GoHighLevel calendar " +
-      "URL to <code>config.js</code> and it will appear here " +
-      "automatically. In the meantime, email " +
-      '<a href="mailto:' + (C.email || "") + '" style="color:var(--red-lt)">' +
-      (C.email || "") + "</a>.</p>" +
-      "</div>";
+    /* Home page: locked until the application is submitted. */
+    if (slot.closest("#hl-book") && !hasApplied()) {
+      slot.style.minHeight = "0";
+      slot.innerHTML =
+        '<div class="hl-embed-note">' +
+        '<p class="eyebrow">Locked</p>' +
+        "<p>The calendar opens the moment your application is submitted " +
+        "in Step 1 above. Apply first &mdash; then pick your time right here.</p>" +
+        "</div>";
+      return;
+    }
+
+    slot.appendChild(calendarIframe());
+    slot.style.minHeight = (C.calendarHeight || 780) + "px";
   }
 
   /* ---- config-driven testimonial grid ----
