@@ -81,19 +81,13 @@
      time behind a "Load more" button. Players are click-to-load
      facades, so nothing heavy loads until a visitor presses play. */
   function renderTestimonials() {
-    var list = C.testimonialVideos || [];
-    if (!list.length) return;
-
-    var root = document.getElementById("hl");
-    var row = root && root.querySelector(".vrow");
-    var sec = row && row.closest("section");
+    var sec = document.getElementById("hl-stories");
     if (!sec) return;
 
-    /* retire the hardcoded placeholder row */
-    row.hidden = true;
-    row.innerHTML = "";
-    var hint = sec.querySelector(".vhint");
-    if (hint) hint.hidden = true;
+    var list = C.testimonialVideos || [];
+    if (!list.length) { sec.hidden = true; return; }
+
+    var wrap = sec.querySelector(".wrap") || sec;
 
     var SRC = {
       wistia: function (id) { return "https://fast.wistia.net/embed/iframe/" + id + "?autoPlay=true"; },
@@ -103,7 +97,7 @@
 
     var grid = document.createElement("div");
     grid.className = "vgrid";
-    row.parentNode.insertBefore(grid, row);
+    wrap.appendChild(grid);
 
     function makeCard(t) {
       var prov = t.provider || C.videoProvider || "wistia";
@@ -178,37 +172,6 @@
     showMore();
   }
 
-  /* ---- testimonial video slots ---- */
-  function wireVideo() {
-    var root = document.getElementById("hl");
-    if (!root) return;
-
-    root.querySelectorAll(".player").forEach(function (p) {
-      if (C.videoProvider && p.dataset.id && p.dataset.id.indexOf("VIDEO_ID") !== 0) {
-        p.dataset.provider = p.dataset.provider || C.videoProvider;
-      }
-    });
-
-    /* Hide testimonial cards still holding a placeholder id, so the
-       page never shows a row of dead thumbnails. */
-    root.querySelectorAll(".vcard").forEach(function (card) {
-      var p = card.querySelector(".player");
-      if (p && p.dataset.id && p.dataset.id.indexOf("VIDEO_ID_") === 0) {
-        card.hidden = true;
-      }
-    });
-
-    /* If every testimonial slot is empty, hide the whole section. */
-    var cards = root.querySelectorAll(".vcard");
-    if (cards.length) {
-      var anyVisible = Array.prototype.some.call(cards, function (c) { return !c.hidden; });
-      if (!anyVisible) {
-        var sec = cards[0].closest("section");
-        if (sec) sec.hidden = true;
-      }
-    }
-  }
-
   /* ---- coach credentials + portrait ---- */
   function renderBio() {
     document.querySelectorAll("[data-cred]").forEach(function (row) {
@@ -235,7 +198,6 @@
     renderCalendar();
     renderBio();
     renderTestimonials();
-    wireVideo();
   }
 
   if (document.readyState === "loading") {

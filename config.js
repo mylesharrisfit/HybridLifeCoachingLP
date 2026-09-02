@@ -61,10 +61,10 @@ window.HL = {
      showing a blank. portraitImage: drop a 4:5 photo into
      /assets and put the path here.
      ───────────────────────────────────────────────────────── */
-  coachingSince: "",        // e.g. "2019"
-  clientsCoached: "",       // e.g. "100+"
-  certifications: "",       // e.g. "NASM-CPT, Precision Nutrition L1"
-  portraitImage: "",        // e.g. "/assets/myles-portrait.jpg"
+  coachingSince: "2020",
+  clientsCoached: "100+",
+  certifications: "",       // left empty on purpose — the row hides itself
+  portraitImage: "/assets/myles-portrait.jpg",
 
 
   /* ── CONTACT ───────────────────────────────────────────── */
