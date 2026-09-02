@@ -12,20 +12,20 @@
 
 <title>Hybrid Life Coaching — Level up your body and mind without giving up your life</title>
 <meta name="description" content="Online 1:1 coaching for people with businesses, careers, travel and a social life. Custom nutrition, training and mindset built around the calendar you actually have.">
-<link rel="canonical" href="https://hybridlifecoaching.net/">
+<link rel="canonical" href="https://www.hybridlifecoaching.net/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Hybrid Life Coaching">
 <meta property="og:title" content="Level up your body and mind without giving up your life">
 <meta property="og:description" content="Online 1:1 coaching for people with full calendars. Travel, work dinners and 60-hour weeks included, not ignored.">
-<meta property="og:url" content="https://hybridlifecoaching.net/">
-<meta property="og:image" content="https://hybridlifecoaching.net/assets/og-image.jpg">
+<meta property="og:url" content="https://www.hybridlifecoaching.net/">
+<meta property="og:image" content="https://www.hybridlifecoaching.net/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Level up your body and mind without giving up your life">
 <meta name="twitter:description" content="Online 1:1 coaching for people with full calendars.">
-<meta name="twitter:image" content="https://hybridlifecoaching.net/assets/og-image.jpg">
+<meta name="twitter:image" content="https://www.hybridlifecoaching.net/assets/og-image.jpg">
 
 <meta name="theme-color" content="#0A0A0B">
 <link rel="icon" href="/assets/favicon.png">
@@ -37,8 +37,8 @@
   "@type": "HealthAndBeautyBusiness",
   "name": "Hybrid Life Coaching",
   "description": "Online 1:1 nutrition, training and mindset coaching for people with demanding careers and full calendars.",
-  "url": "https://hybridlifecoaching.net/",
-  "image": "https://hybridlifecoaching.net/assets/og-image.jpg",
+  "url": "https://www.hybridlifecoaching.net/",
+  "image": "https://www.hybridlifecoaching.net/assets/og-image.jpg",
   "founder": { "@type": "Person", "name": "Myles Harris", "jobTitle": "Founder and Coach" },
   "areaServed": "Worldwide",
   "priceRange": "$$$",
@@ -133,29 +133,38 @@
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E")}
 
 /* ---------- buttons ---------- */
-#hl .btn{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:17px 30px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+#hl .btn{display:inline-block;position:relative;overflow:hidden;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:17px 30px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .2s ease}
+#hl .btn::before{content:'';position:absolute;top:0;bottom:0;left:-45%;width:32%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-24deg);transition:left .55s ease;pointer-events:none}
+#hl .btn:hover::before{left:118%}
 #hl .btn-solid{background:var(--red);color:#fff}
 #hl .btn-solid:hover{background:#93151C;color:#fff}
 #hl .btn-ghost{border-color:rgba(237,235,233,.35);color:var(--bone)}
 #hl .btn-ghost:hover{border-color:var(--bone);background:rgba(237,235,233,.07)}
 
-/* ---------- hero + VSL ---------- */
-#hl .hero{position:relative;background:var(--ink);overflow:hidden;padding:clamp(56px,8vw,92px) 0 clamp(60px,8vw,96px)}
-#hl .hero-bg{position:absolute;inset:0;
+/* ---------- cinematic hero ---------- */
+#hl .hero{position:relative;background:var(--ink);overflow:hidden;min-height:min(94vh,1000px);display:flex;align-items:center;padding:clamp(72px,9vw,120px) 0}
+#hl .hero-bg{position:absolute;inset:0;background:url('/assets/hero.jpg') center 26%/cover no-repeat}
+#hl .hero-bg::after{content:'';position:absolute;inset:0;
   background:
-    radial-gradient(90% 70% at 50% -10%,rgba(176,27,35,.3) 0%,rgba(10,10,11,0) 62%),
-    radial-gradient(70% 60% at 8% 100%,rgba(74,12,17,.55) 0%,rgba(10,10,11,0) 65%),
-    linear-gradient(180deg,#131215 0%,#0A0A0B 60%,#070708 100%)}
-#hl .hero .wrap{position:relative;z-index:3;text-align:center}
-#hl .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.6vw,66px);line-height:.98;letter-spacing:-.035em;text-transform:uppercase;margin:22px auto 0;max-width:18ch;color:var(--bone)}
+    linear-gradient(180deg,rgba(10,10,11,.82) 0%,rgba(10,10,11,.46) 32%,rgba(10,10,11,.5) 58%,rgba(7,7,8,.96) 100%),
+    radial-gradient(85% 65% at 50% 112%,rgba(176,27,35,.4),rgba(10,10,11,0) 66%)}
+#hl .hero .wrap{position:relative;z-index:3;text-align:center;width:100%}
+#hl .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(38px,6.6vw,84px);line-height:.95;letter-spacing:-.035em;text-transform:uppercase;margin:22px auto 0;max-width:18ch;color:var(--bone);text-shadow:0 2px 30px rgba(10,10,11,.55)}
 #hl .hero h1 em{display:block;font-family:var(--display);font-style:normal;font-weight:400;text-transform:uppercase;letter-spacing:-.02em;font-size:.82em;color:var(--red-lt);margin-top:.12em}
-#hl .hero .sub{margin:24px auto 0;max-width:56ch;font-size:clamp(15px,1.4vw,17px);color:#B4B1B3}
+#hl .hero .sub{margin:26px auto 0;max-width:54ch;font-size:clamp(15px,1.4vw,17px);color:#C9C6C8;text-shadow:0 1px 18px rgba(10,10,11,.8)}
 
-#hl .player-shell{max-width:1000px;margin:clamp(38px,5vw,56px) auto 0;position:relative}
-#hl .player-shell::before{content:'';position:absolute;inset:-1px;border:1px solid rgba(176,27,35,.55);pointer-events:none;z-index:4}
-#hl .hero-media{aspect-ratio:16/9;width:100%;
-  background:url('/assets/hero.jpg') center/cover no-repeat,
-    radial-gradient(70% 60% at 50% 40%,rgba(176,27,35,.28),rgba(10,10,11,1) 78%),var(--coal)}
+/* claw mark accents */
+#hl .claw{display:inline-flex;gap:8px;margin-bottom:20px}
+#hl .claw i{display:block;width:30px;height:4px;background:var(--red);transform:skewX(-32deg)}
+#hl .claw i:nth-child(2){width:44px}
+#hl .claw i:nth-child(3){width:20px;opacity:.6}
+#hl .sec-head::before{content:'';display:block;width:46px;height:12px;margin-bottom:16px;background:repeating-linear-gradient(115deg,var(--red) 0 3px,transparent 3px 11px)}
+#hl .proof-head::before{content:'';display:block;width:46px;height:12px;margin:0 auto 16px;background:repeating-linear-gradient(115deg,var(--red) 0 3px,transparent 3px 11px)}
+
+/* subtle tiger-stripe texture */
+#hl .sec.light{background-image:repeating-linear-gradient(115deg,rgba(10,10,11,.022) 0 2px,transparent 2px 34px)}
+#hl .sec:not(.light),#hl .manifesto,#hl .strip{background-image:repeating-linear-gradient(115deg,rgba(237,235,233,.012) 0 2px,transparent 2px 34px)}
+
 #hl .player{position:relative;aspect-ratio:16/9;background:var(--coal);cursor:pointer;overflow:hidden;width:100%;display:block;padding:0;border:0}
 #hl .player::after{content:'';position:absolute;inset:0;background-image:var(--poster,none);background-size:cover;background-position:center;z-index:0}
 #hl .player-veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,10,11,.25) 0%,rgba(10,10,11,.55) 65%,rgba(10,10,11,.8) 100%)}
@@ -417,6 +426,58 @@
 #hl .foot a:hover{color:var(--bone)}
 #hl .foot .links{display:flex;gap:26px;flex-wrap:wrap}
 #hl .disclaimer{margin-top:18px;font-size:11px;letter-spacing:0;text-transform:none;color:#4B484D;max-width:70ch;line-height:1.6}
+
+/* ---------- proof tags ---------- */
+#hl .proof-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 14px;margin-top:22px}
+#hl .proof-tags span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);border:1px solid var(--line-d);padding:8px 14px;position:relative}
+#hl .proof-tags span::before{content:'';display:inline-block;width:9px;height:8px;margin-right:9px;vertical-align:-1px;background:repeating-linear-gradient(115deg,var(--red) 0 2px,transparent 2px 5px)}
+
+/* ---------- apply steps ---------- */
+#hl .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-d);border:1px solid var(--line-d);max-width:880px;margin:0 auto 34px;text-align:left}
+#hl .steps li{background:var(--coal);padding:22px 26px;position:relative;overflow:hidden}
+#hl .steps li::after{content:'';position:absolute;right:-14px;top:-14px;width:44px;height:44px;background:repeating-linear-gradient(115deg,rgba(176,27,35,.4) 0 3px,transparent 3px 11px);opacity:.5}
+#hl .steps b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--red-lt);margin-bottom:9px}
+#hl .steps strong{display:block;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em;text-transform:uppercase;color:var(--bone)}
+#hl .steps span{display:block;margin-top:6px;font-size:13px;color:var(--mist);font-weight:300}
+@media(max-width:700px){#hl .steps{grid-template-columns:1fr}}
+
+/* ---------- microinteractions + hover transforms ---------- */
+#hl .card,#hl .win,#hl .qcard,#hl .msgcard,#hl .vcard,#hl .stat{transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s ease,border-color .35s ease}
+#hl .card:hover,#hl .win:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(10,10,11,.16)}
+#hl .win{position:relative;overflow:hidden}
+#hl .win::before{content:'';position:absolute;left:0;top:0;width:0;height:3px;background:var(--red);transition:width .4s cubic-bezier(.22,.61,.36,1)}
+#hl .win:hover::before{width:100%}
+#hl .qcard:hover{transform:translateY(-4px);border-color:rgba(176,27,35,.55)}
+#hl .vcard:hover{transform:translateY(-4px);border-color:rgba(176,27,35,.6)}
+#hl .msgcard:hover{transform:translateY(-4px) rotate(-.4deg)}
+#hl .mcard img{transition:transform .5s cubic-bezier(.22,.61,.36,1)}
+#hl .mcard:hover img{transform:scale(1.05)}
+#hl summary::after{transition:transform .25s ease}
+
+/* ---------- cinematic motion (skipped entirely under reduced motion) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  #hl .hero .hero-logo,#hl .hero .claw,#hl .hero .eyebrow,#hl .hero h1,#hl .hero .sub,#hl .hero .hero-cta,#hl .hero .hero-note{opacity:0;transform:translateY(26px);animation:hl-rise .85s cubic-bezier(.22,.61,.36,1) forwards}
+  #hl .hero .hero-logo{animation-delay:.05s}
+  #hl .hero .claw{animation-delay:.16s}
+  #hl .hero .eyebrow{animation-delay:.24s}
+  #hl .hero h1{animation-delay:.34s}
+  #hl .hero .sub{animation-delay:.52s}
+  #hl .hero .hero-cta{animation-delay:.68s}
+  #hl .hero .hero-note{animation-delay:.82s}
+  @keyframes hl-rise{to{opacity:1;transform:none}}
+
+  #hl .rv{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);transition-delay:var(--rvd,0s)}
+  #hl .rv.in{opacity:1;transform:none}
+  #hl .sec-head.rv .h2,#hl .proof-head.rv .h2{clip-path:inset(0 100% 0 0);transition:clip-path .9s cubic-bezier(.22,.61,.36,1) .15s}
+  #hl .sec-head.rv.in .h2,#hl .proof-head.rv.in .h2{clip-path:inset(0 0 0 0)}
+  #hl .sec-head.rv::before,#hl .proof-head.rv::before{width:0;transition:width .55s ease .05s}
+  #hl .sec-head.rv.in::before,#hl .proof-head.rv.in::before{width:46px}
+
+  #hl .hero-bg{will-change:transform}
+  #hl .progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--red),var(--red-lt));z-index:99;pointer-events:none}
+  #hl .manifesto::after{animation:hl-pulse 6s ease-in-out infinite}
+  @keyframes hl-pulse{0%,100%{opacity:.7}50%{opacity:1}}
+}
 </style>
 </head><body style='margin:0'><!-- ===================================================================
      HYBRID LIFE — GHL BLOCK 2 of 3 : PAGE BODY
@@ -433,17 +494,13 @@
     <div class="grain" aria-hidden="true"></div>
     <div class="wrap">
       <img class="hero-logo" src="/assets/logo.png" alt="Hybrid Life Coaching">
+      <span class="claw" aria-hidden="true"><i></i><i></i><i></i></span>
       <p class="eyebrow">100% online &middot; 1:1 hybrid coaching</p>
       <h1>
         Level up your body and mind
         <em>without giving up your life</em>
       </h1>
       <p class="sub">You have a business, a job, a calendar full of travel and dinners you're not cancelling. Hybrid coaching builds the body and the mindset around that life instead of asking you to pause it.</p>
-
-    <div class="player-shell">
-        <!-- SWAP: drop your hero photo at /assets/hero.jpg and it appears here automatically -->
-        <div class="hero-media" role="img" aria-label="Hybrid Life Coaching"></div>
-      </div>
 
       <div class="hero-cta">
         <!-- SWAP: point href at your GHL form step, survey, or calendar link -->
@@ -459,6 +516,11 @@
     <div class="wrap proof-head">
       <p class="eyebrow">Client transformations</p>
       <h2 class="h2">Different jobs. Different families. <em>Same problem.</em></h2>
+      <div class="proof-tags">
+        <span>28 documented transformations</span>
+        <span>12 unedited check-in messages</span>
+        <span>Shared with permission</span>
+      </div>
     </div>
     <div class="marquee">
       <div class="mtrack a">
@@ -981,7 +1043,13 @@
       <p class="eyebrow">Applications open</p>
       <h2 class="h2">Level up the body and the mind <em>without giving up the life</em></h2>
       <p>Tell me about your goals and your schedule. If I can help, we'll get on a call. If I can't, I'll say so.</p>
-      <!-- SWAP: link to your GHL application form. Do NOT hand-code the form. -->
+
+      <ol class="steps">
+        <li><b>Step 01</b><strong>Apply</strong><span>Two minutes. No payment.</span></li>
+        <li><b>Step 02</b><strong>Qualify</strong><span>I review every application personally, same day.</span></li>
+        <li><b>Step 03</b><strong>Book the call</strong><span>Pick a time that works, right below.</span></li>
+      </ol>
+
       <a class="btn btn-solid" href="#hl-form">Start your application</a>
 
       <!-- ============ STEP 1 — APPLICATION FORM ============ -->
@@ -1118,6 +1186,65 @@
         if(e.key === 'End'){ set(100); e.preventDefault(); }
       });
     });
+
+    /* ---- cinematic motion: reveals, parallax, progress, magnetic CTAs ----
+       Everything here is skipped for prefers-reduced-motion users. */
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
+
+      /* scroll progress bar + hero parallax, one rAF-throttled listener */
+      var pbar = document.createElement('div');
+      pbar.className = 'progress';
+      pbar.setAttribute('aria-hidden','true');
+      root.appendChild(pbar);
+      var heroBg = root.querySelector('.hero-bg');
+      var ticking = false;
+      function onScroll(){
+        if(ticking) return;
+        ticking = true;
+        requestAnimationFrame(function(){
+          var max = document.body.scrollHeight - window.innerHeight;
+          pbar.style.transform = 'scaleX(' + (max > 0 ? window.scrollY / max : 0) + ')';
+          if(heroBg && window.scrollY < window.innerHeight * 1.3){
+            heroBg.style.transform = 'translateY(' + (window.scrollY * 0.28) + 'px) scale(1.06)';
+          }
+          ticking = false;
+        });
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+
+      /* scroll-triggered reveals with staggered entrances */
+      if('IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(en){
+            if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+
+        root.querySelectorAll('.sec-head,.proof-head,.compare,.bio-media,.msgs,.manifesto .wrap,.final .h2')
+          .forEach(function(el){ el.classList.add('rv'); io.observe(el); });
+
+        ['.strip-in .stat', '.wins .win', '.qgrid .qcard', '.phases .phase',
+         '.rail .tick', '.steps li'].forEach(function(sel){
+          root.querySelectorAll(sel).forEach(function(el, i){
+            el.classList.add('rv');
+            el.style.setProperty('--rvd', (i % 9) * 0.08 + 's');
+            io.observe(el);
+          });
+        });
+      }
+
+      /* magnetic hover on primary CTAs */
+      root.querySelectorAll('.hero-cta .btn, .final a.btn-solid').forEach(function(b){
+        b.addEventListener('mousemove', function(e){
+          var r = b.getBoundingClientRect();
+          var dx = (e.clientX - r.left - r.width / 2) / r.width;
+          var dy = (e.clientY - r.top - r.height / 2) / r.height;
+          b.style.transform = 'translate(' + (dx * 8).toFixed(1) + 'px,' + (dy * 6).toFixed(1) + 'px)';
+        });
+        b.addEventListener('mouseleave', function(){ b.style.transform = ''; });
+      });
+    }
   }
 
   if(document.readyState === 'loading'){

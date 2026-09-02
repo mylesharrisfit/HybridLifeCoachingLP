@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /booking
 
-Sitemap: https://hybridlifecoaching.net/sitemap.xml
+Sitemap: https://www.hybridlifecoaching.net/sitemap.xml
