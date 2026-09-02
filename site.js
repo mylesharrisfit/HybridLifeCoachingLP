@@ -1,99 +1,83 @@
 /* ═══════════════════════════════════════════════════════════════
-   Renders the GoHighLevel embeds from config.js, wires the VSL,
-   and hides any video testimonial slot that has no ID yet.
+   Renders the GoHighLevel embeds from config.js and the
+   config-driven video testimonial grid.
+
+   Embed slots that live inside a popup (.hl-modal) load lazily,
+   the first time that popup opens — the page itself stays light.
+   Slots sitting directly on a page (like /booking) render at once.
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   var C = window.HL || {};
 
-  function el(tag, attrs) {
-    var n = document.createElement(tag);
-    Object.keys(attrs || {}).forEach(function (k) { n.setAttribute(k, attrs[k]); });
-    return n;
-  }
-
   function iframeFor(src, height, title) {
-    var f = el("iframe", {
-      src: src,
-      title: title,
-      height: String(height),
-      scrolling: "no",
-      loading: "lazy",
-      allow: "clipboard-write; camera; microphone; autoplay; encrypted-media",
-    });
+    var f = document.createElement("iframe");
+    f.src = src;
+    f.title = title;
+    f.height = String(height);
+    f.setAttribute("scrolling", "no");
+    f.setAttribute("loading", "lazy");
+    f.setAttribute("allow", "clipboard-write; camera; microphone; autoplay; encrypted-media");
     f.style.height = height + "px";
     return f;
   }
 
-  /* ---- GHL application form (home page) ---- */
-  function renderForm() {
-    var slot = document.getElementById("hl-embed-slot");
-    if (!slot) return;
-
-    if (C.applicationFormUrl) {
-      slot.appendChild(
-        iframeFor(C.applicationFormUrl, C.formHeight || 900, "Coaching application")
-      );
-      slot.style.minHeight = (C.formHeight || 900) + "px";
-      return;
-    }
-
-    /* No form URL configured yet — show something honest instead
-       of an empty box. */
+  function fallbackNote(slot, label) {
     slot.style.minHeight = "0";
     slot.innerHTML =
       '<div class="hl-embed-note">' +
-      '<p class="eyebrow">Application</p>' +
-      "<p>The application form isn't connected yet. Add your GoHighLevel " +
-      "form URL to <code>config.js</code> and it will appear here " +
-      "automatically. In the meantime, email " +
-      '<a href="mailto:' + (C.email || "") + '" style="color:var(--red-lt)">' +
-      (C.email || "") + "</a>.</p>" +
+      '<p class="eyebrow">' + label + "</p>" +
+      "<p>This isn't connected yet. Add the URL to <code>config.js</code> " +
+      "and it will appear here automatically. In the meantime, email " +
+      '<a href="mailto:' + (C.email || "") + '">' + (C.email || "") + "</a>.</p>" +
       "</div>";
   }
 
-  /* ---- GHL calendar (/booking page) ---- */
-  function renderCalendar() {
-    var slot = document.getElementById("hl-calendar-slot");
-    if (!slot) return;
+  /* ---- GHL embeds: application form + booking calendar ---- */
+  var EMBEDS = [
+    { slotId: "hl-embed-slot",    url: C.applicationFormUrl, height: C.formHeight || 700,     title: "Coaching application", label: "Application" },
+    { slotId: "hl-calendar-slot", url: C.calendarUrl,        height: C.calendarHeight || 780, title: "Book a call",          label: "Booking" }
+  ];
 
-    if (C.calendarUrl) {
-      slot.appendChild(
-        iframeFor(C.calendarUrl, C.calendarHeight || 780, "Book a call")
-      );
-      slot.style.minHeight = (C.calendarHeight || 780) + "px";
-      return;
+  function loadEmbed(cfg) {
+    var slot = document.getElementById(cfg.slotId);
+    if (!slot || slot.dataset.loaded) return;
+    slot.dataset.loaded = "1";
+    if (cfg.url) {
+      slot.appendChild(iframeFor(cfg.url, cfg.height, cfg.title));
+      slot.style.minHeight = cfg.height + "px";
+    } else {
+      fallbackNote(slot, cfg.label);
     }
+  }
 
-    slot.style.minHeight = "0";
-    slot.innerHTML =
-      '<div class="hl-embed-note">' +
-      '<p class="eyebrow">Booking</p>' +
-      "<p>The calendar isn't connected yet. Add your GoHighLevel calendar " +
-      "URL to <code>config.js</code> and it will appear here " +
-      "automatically. In the meantime, email " +
-      '<a href="mailto:' + (C.email || "") + '" style="color:var(--red-lt)">' +
-      (C.email || "") + "</a>.</p>" +
-      "</div>";
+  function wireEmbeds() {
+    EMBEDS.forEach(function (cfg) {
+      var slot = document.getElementById(cfg.slotId);
+      if (!slot) return;
+      if (!slot.closest(".hl-modal")) loadEmbed(cfg); /* inline slot (e.g. /booking) */
+    });
+    /* modal slots load the first time their popup opens */
+    document.addEventListener("hl:modal-open", function (e) {
+      var m = document.getElementById(e.detail && e.detail.id);
+      if (!m) return;
+      EMBEDS.forEach(function (cfg) {
+        if (m.querySelector("#" + cfg.slotId)) loadEmbed(cfg);
+      });
+    });
   }
 
   /* ---- config-driven testimonial grid ----
-     Renders C.testimonialVideos as a 3-across grid, nine cards at a
-     time behind a "Load more" button. Players are click-to-load
-     facades, so nothing heavy loads until a visitor presses play. */
+     The #hl-videos section ships hidden. When config.js has clips,
+     it unhides and renders them 9 at a time behind a "Load more"
+     button. Players are click-to-load facades, so nothing heavy
+     loads until a visitor presses play. */
   function renderTestimonials() {
     var list = C.testimonialVideos || [];
-    if (!list.length) return;
+    var sec = document.getElementById("hl-videos");
+    if (!sec || !list.length) return;
 
-    var root = document.getElementById("hl");
-    var row = root && root.querySelector(".vrow");
-    var sec = row && row.closest("section");
-    if (!sec) return;
-
-    /* retire the hardcoded placeholder row */
-    row.hidden = true;
-    row.innerHTML = "";
-    var hint = sec.querySelector(".vhint");
-    if (hint) hint.hidden = true;
+    var wrap = sec.querySelector(".wrap") || sec;
+    sec.hidden = false;
 
     var SRC = {
       wistia: function (id) { return "https://fast.wistia.net/embed/iframe/" + id + "?autoPlay=true"; },
@@ -103,7 +87,7 @@
 
     var grid = document.createElement("div");
     grid.className = "vgrid";
-    row.parentNode.insertBefore(grid, row);
+    wrap.appendChild(grid);
 
     function makeCard(t) {
       var prov = t.provider || C.videoProvider || "wistia";
@@ -159,7 +143,7 @@
     moreBtn.className = "btn btn-ghost";
     moreBtn.type = "button";
     moreWrap.appendChild(moreBtn);
-    grid.parentNode.insertBefore(moreWrap, grid.nextSibling);
+    wrap.appendChild(moreWrap);
 
     function showMore() {
       var next = list.slice(shown, shown + BATCH);
@@ -176,37 +160,6 @@
     }
     moreBtn.addEventListener("click", showMore);
     showMore();
-  }
-
-  /* ---- testimonial video slots ---- */
-  function wireVideo() {
-    var root = document.getElementById("hl");
-    if (!root) return;
-
-    root.querySelectorAll(".player").forEach(function (p) {
-      if (C.videoProvider && p.dataset.id && p.dataset.id.indexOf("VIDEO_ID") !== 0) {
-        p.dataset.provider = p.dataset.provider || C.videoProvider;
-      }
-    });
-
-    /* Hide testimonial cards still holding a placeholder id, so the
-       page never shows a row of dead thumbnails. */
-    root.querySelectorAll(".vcard").forEach(function (card) {
-      var p = card.querySelector(".player");
-      if (p && p.dataset.id && p.dataset.id.indexOf("VIDEO_ID_") === 0) {
-        card.hidden = true;
-      }
-    });
-
-    /* If every testimonial slot is empty, hide the whole section. */
-    var cards = root.querySelectorAll(".vcard");
-    if (cards.length) {
-      var anyVisible = Array.prototype.some.call(cards, function (c) { return !c.hidden; });
-      if (!anyVisible) {
-        var sec = cards[0].closest("section");
-        if (sec) sec.hidden = true;
-      }
-    }
   }
 
   /* ---- coach credentials + portrait ---- */
@@ -231,11 +184,9 @@
   }
 
   function init() {
-    renderForm();
-    renderCalendar();
+    wireEmbeds();
     renderBio();
     renderTestimonials();
-    wireVideo();
   }
 
   if (document.readyState === "loading") {
