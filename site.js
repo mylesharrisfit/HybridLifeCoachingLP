@@ -169,7 +169,46 @@
     grid.className = "vgrid";
     wrap.appendChild(grid);
 
+    /* Entries with `href` are link-outs (e.g. Instagram): custom
+       thumbnail, opens in a new tab so the landing page stays put.
+       Entries with `id` keep the original click-to-load embed. */
+    function makeLinkCard(t) {
+      var card = document.createElement("div");
+      card.className = "vcard";
+
+      var a = document.createElement("a");
+      a.className = "player";
+      a.href = t.href;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.setAttribute("aria-label",
+        "Watch " + (t.name ? t.name + "'s" : "this") + " testimonial (opens in a new tab)");
+      if (t.poster) a.style.setProperty("--poster", "url('" + t.poster + "')");
+      a.innerHTML =
+        (t.poster ? "" : '<span class="player-fallback" aria-hidden="true"></span>') +
+        '<span class="player-veil" aria-hidden="true"></span>' +
+        '<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>' +
+        '<span class="vsrc">' + (t.source || "Watch on Instagram") + ' \u2197</span>';
+      a.addEventListener("click", function () {
+        if (window.dataLayer) { window.dataLayer.push({ event: "testimonial_click", name: t.name || "" }); }
+        if (window.fbq) { fbq("trackCustom", "TestimonialClick", { name: t.name || "" }); }
+      });
+      card.appendChild(a);
+      card.appendChild(caption(t));
+      return card;
+    }
+
+    function caption(t) {
+      var cap = document.createElement("div");
+      cap.className = "cap";
+      if (t.name) { var b = document.createElement("b"); b.textContent = t.name; cap.appendChild(b); }
+      if (t.role) { var r = document.createElement("div"); r.className = "role"; r.textContent = t.role; cap.appendChild(r); }
+      if (t.caption) { var q = document.createElement("p"); q.textContent = t.caption; cap.appendChild(q); }
+      return cap;
+    }
+
     function makeCard(t) {
+      if (t.href) return makeLinkCard(t);
       var prov = t.provider || C.videoProvider || "wistia";
       if (!SRC[prov] || !t.id) return null;
 
@@ -184,7 +223,7 @@
       var poster = t.poster || (prov === "youtube" ? "https://i.ytimg.com/vi/" + t.id + "/hqdefault.jpg" : "");
       if (poster) btn.style.setProperty("--poster", "url('" + poster + "')");
       btn.innerHTML =
-        '<span class="player-fallback" aria-hidden="true"></span>' +
+        (poster ? "" : '<span class="player-fallback" aria-hidden="true"></span>') +
         '<span class="player-veil" aria-hidden="true"></span>' +
         '<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>';
       btn.addEventListener("click", function () {
