@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- ===================================================================
+     HYBRID LIFE COACHING
+     Everything you'll need to change is in the HL config block below.
+     =================================================================== -->
+<script src="/config.js"></script>
+
+<title>Hybrid Life Coaching — Level up your athleticism, body, and mind without giving up your life</title>
+<meta name="description" content="Online 1:1 coaching for people with businesses, careers, travel and a social life. Custom nutrition, training and mindset built around the calendar you actually have.">
+<link rel="canonical" href="https://www.hybridlifecoaching.net/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hybrid Life Coaching">
+<meta property="og:title" content="Level up your athleticism, body, and mind without giving up your life">
+<meta property="og:description" content="Online 1:1 coaching for people with full calendars. Travel, work dinners and 60-hour weeks included, not ignored.">
+<meta property="og:url" content="https://www.hybridlifecoaching.net/">
+<meta property="og:image" content="https://www.hybridlifecoaching.net/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Level up your athleticism, body, and mind without giving up your life">
+<meta name="twitter:description" content="Online 1:1 coaching for people with full calendars.">
+<meta name="twitter:image" content="https://www.hybridlifecoaching.net/assets/og-image.jpg">
+
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Hybrid Life Coaching",
+  "description": "Online 1:1 nutrition, training and mindset coaching for people with demanding careers and full calendars.",
+  "url": "https://www.hybridlifecoaching.net/",
+  "image": "https://www.hybridlifecoaching.net/assets/og-image.jpg",
+  "founder": { "@type": "Person", "name": "Myles Harris", "jobTitle": "Founder and Coach" },
+  "areaServed": "Worldwide",
+  "priceRange": "$$$",
+  "sameAs": [ "https://www.instagram.com/mylesharrisfit", "https://www.instagram.com/hybridlifeco" ]
+}
+</script>
+
+<style>html,body{margin:0;padding:0;background:#0A0A0B}
+/* ---------- booking + form embeds ---------- */
+#hl .hl-embed-wrap{margin:40px auto 0;max-width:760px}
+#hl .hl-embed{background:var(--coal);border:1px solid var(--line-d);border-radius:4px;overflow:hidden;min-height:640px}
+#hl .hl-embed iframe{width:100%;border:0;display:block;background:transparent}
+#hl .hl-embed-note{padding:56px 28px;text-align:center}
+#hl .hl-embed-note .eyebrow{margin-bottom:14px}
+#hl .hl-embed-note p{color:var(--mist);font-size:15px;max-width:46ch;margin:0 auto 22px}
+#hl .btn-ghost{border:1px solid var(--line-d);color:var(--bone);background:transparent}
+#hl .btn-ghost:hover{border-color:var(--red-lt);color:var(--red-lt)}
+@media(max-width:640px){
+  #hl .btn-ghost{margin-left:0!important;margin-top:12px}
+  #hl .final .btn{display:block;width:100%;text-align:center}
+}
+/* video slots with no ID yet are hidden by footer script */
+#hl .vcard[hidden]{display:none!important}
+
+</style>
+
+<!-- Tracking loads only once you put the IDs in config.js -->
+<script src="/tracking.js"></script>
+<!-- ===================================================================
+     HYBRID LIFE — GHL BLOCK 1 of 3 : HEADER CODE
+     Paste into: Settings → Custom Code → Header Tracking Code
+     (or Page Settings → Custom Code → Header, for one page only)
+     =================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- tokens + hard reset, scoped to #hl only ---------- */
+#hl{
+  --ink:#0A0A0B; --coal:#121214; --char:#1A1A1D;
+  --paper:#F2F0ED; --paper-2:#E7E4E0;
+  --red:#B01B23; --red-lt:#E0555C; --wine:#4A0C11;
+  --bone:#EDEBE9; --mist:#9A9799; --ash:#67646A; --graphite:#3A3A3E;
+  --line-d:rgba(237,235,233,.11); --line-l:rgba(10,10,11,.13);
+  --display:'Archivo',sans-serif; --accent:'Archivo',sans-serif;
+  --body:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+  --gut:clamp(20px,5vw,72px); --maxw:1240px;
+
+  /* forces full-bleed even inside a padded GHL row */
+  position:relative;
+  width:100vw;
+  max-width:100vw;
+  margin-left:calc(50% - 50vw);
+  overflow-x:hidden;
+
+  background:var(--ink);
+  color:var(--bone);
+  font-family:var(--body);
+  font-weight:300;
+  line-height:1.6;
+  text-align:left;
+  -webkit-font-smoothing:antialiased;
+}
+#hl *,#hl *::before,#hl *::after{box-sizing:border-box;margin:0;padding:0}
+#hl p,#hl h1,#hl h2,#hl h3,#hl h4,#hl ul,#hl ol,#hl li,#hl dl,#hl dd,#hl dt,#hl blockquote,#hl figure{margin:0;padding:0}
+#hl ul,#hl ol{list-style:none}
+#hl img{max-width:100%;display:block;height:auto}
+#hl a{color:inherit;text-decoration:none}
+#hl button{font:inherit;color:inherit;background:none;border:0}
+#hl :focus-visible{outline:2px solid var(--red-lt);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){#hl *{animation:none!important;transition:none!important}}
+
+#hl .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+/* ---------- type ---------- */
+#hl .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red-lt);line-height:1.5}
+#hl .h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.4vw,52px);line-height:1.02;letter-spacing:-.02em;text-transform:uppercase;color:inherit}
+#hl .h2 em{font-family:var(--display);font-style:normal;font-weight:400;text-transform:uppercase;letter-spacing:-.015em;font-size:1em;color:var(--red-lt)}
+#hl .light .h2 em{color:var(--red)}
+#hl .lede{font-size:clamp(16px,1.5vw,18px);color:var(--mist);max-width:56ch}
+
+/* ---------- sections ---------- */
+#hl .sec{padding:clamp(72px,10vw,128px) 0;position:relative;overflow:hidden}
+#hl .sec-head{max-width:70ch;position:relative;z-index:2}
+#hl .sec-head .h2{margin:16px 0 20px}
+#hl .light{background:var(--paper);color:var(--ink)}
+#hl .light .eyebrow{color:var(--red)}
+#hl .light .lede{color:var(--graphite)}
+#hl .grain{position:absolute;inset:0;opacity:.42;mix-blend-mode:overlay;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E")}
+
+/* ---------- buttons ---------- */
+#hl .btn{display:inline-block;position:relative;overflow:hidden;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:17px 30px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .2s ease}
+#hl .btn::before{content:'';position:absolute;top:0;bottom:0;left:-45%;width:32%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-24deg);transition:left .55s ease;pointer-events:none}
+#hl .btn:hover::before{left:118%}
+#hl .btn-solid{background:var(--red);color:#fff}
+#hl .btn-solid:hover{background:#93151C;color:#fff}
+#hl .btn-ghost{border-color:rgba(237,235,233,.35);color:var(--bone)}
+#hl .btn-ghost:hover{border-color:var(--bone);background:rgba(237,235,233,.07)}
+
+/* ---------- cinematic hero ---------- */
+#hl .hero{position:relative;background:var(--ink);overflow:hidden;min-height:min(94vh,1000px);display:flex;align-items:center;padding:clamp(72px,9vw,120px) 0}
+#hl .hero-bg{position:absolute;inset:0;background:url('/assets/hero-kettlebell.jpg') center 50%/cover no-repeat}
+#hl .hero-bg::after{content:'';position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(10,10,11,.82) 0%,rgba(10,10,11,.46) 32%,rgba(10,10,11,.5) 58%,rgba(7,7,8,.96) 100%),
+    radial-gradient(85% 65% at 50% 112%,rgba(176,27,35,.4),rgba(10,10,11,0) 66%)}
+#hl .hero .wrap{position:relative;z-index:3;text-align:center;width:100%}
+#hl .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(38px,6.6vw,84px);line-height:.95;letter-spacing:-.035em;text-transform:uppercase;margin:22px auto 0;max-width:18ch;color:var(--bone);text-shadow:0 2px 30px rgba(10,10,11,.55)}
+#hl .hero h1 em{display:block;font-family:var(--display);font-style:normal;font-weight:400;text-transform:uppercase;letter-spacing:-.02em;font-size:.82em;color:var(--red-lt);margin-top:.12em}
+#hl .hero .sub{margin:26px auto 0;max-width:54ch;font-size:clamp(15px,1.4vw,17px);color:#C9C6C8;text-shadow:0 1px 18px rgba(10,10,11,.8)}
+
+/* claw mark accents */
+#hl .claw{display:inline-flex;gap:8px;margin-bottom:20px}
+#hl .claw i{display:block;width:30px;height:4px;background:var(--red);transform:skewX(-32deg)}
+#hl .claw i:nth-child(2){width:44px}
+#hl .claw i:nth-child(3){width:20px;opacity:.6}
+#hl .sec-head::before{content:'';display:block;width:46px;height:12px;margin-bottom:16px;background:repeating-linear-gradient(115deg,var(--red) 0 3px,transparent 3px 11px)}
+#hl .proof-head::before{content:'';display:block;width:46px;height:12px;margin:0 auto 16px;background:repeating-linear-gradient(115deg,var(--red) 0 3px,transparent 3px 11px)}
+
+/* subtle tiger-stripe texture */
+#hl .sec.light{background-image:repeating-linear-gradient(115deg,rgba(10,10,11,.022) 0 2px,transparent 2px 34px)}
+#hl .sec:not(.light),#hl .manifesto,#hl .strip{background-image:repeating-linear-gradient(115deg,rgba(237,235,233,.012) 0 2px,transparent 2px 34px)}
+
+#hl .player{position:relative;aspect-ratio:16/9;background:var(--coal);cursor:pointer;overflow:hidden;width:100%;display:block;padding:0;border:0}
+#hl .player::after{content:'';position:absolute;inset:0;background-image:var(--poster,none);background-size:cover;background-position:center;z-index:0}
+#hl .player-veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,10,11,.25) 0%,rgba(10,10,11,.55) 65%,rgba(10,10,11,.8) 100%)}
+#hl .player-fallback{position:absolute;inset:0;z-index:1;background:radial-gradient(70% 60% at 50% 40%,rgba(176,27,35,.28),rgba(10,10,11,1) 78%),var(--coal)}
+#hl .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:clamp(74px,9vw,104px);height:clamp(74px,9vw,104px);border-radius:50%;border:1px solid rgba(237,235,233,.55);background:rgba(10,10,11,.35);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);display:grid;place-items:center;transition:background .3s,border-color .3s,transform .3s}
+#hl .play svg{width:26px;height:26px;fill:var(--bone);margin-left:4px;transition:fill .3s}
+#hl .player:hover .play{background:var(--red);border-color:var(--red);transform:translate(-50%,-50%) scale(1.06)}
+#hl .player:hover .play svg{fill:#fff}
+#hl .player-meta{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:20px clamp(16px,3vw,28px);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);text-align:left}
+#hl .player-meta strong{color:var(--bone);font-weight:500;display:block;margin-bottom:5px;letter-spacing:.1em}
+#hl .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
+
+#hl .hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:36px}
+#hl .hero-note{margin-top:22px;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ash)}
+
+/* ---------- strip ---------- */
+#hl .strip{background:var(--coal);border-top:1px solid rgba(176,27,35,.35)}
+#hl .strip-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);display:grid;grid-template-columns:repeat(3,1fr)}
+#hl .stat{padding:38px 0;text-align:center;border-right:1px solid var(--line-d)}
+#hl .stat:last-child{border-right:0}
+#hl .stat b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.02em;color:var(--red-lt);line-height:1}
+#hl .stat span{display:block;margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+@media(max-width:700px){#hl .strip-in{grid-template-columns:1fr}#hl .stat{border-right:0;border-bottom:1px solid var(--line-d);padding:26px 0}#hl .stat:last-child{border-bottom:0}}
+
+/* ---------- transformations ---------- */
+#hl .ba-feature{margin-top:56px;position:relative;z-index:2;display:grid;grid-template-columns:1.4fr .6fr;gap:clamp(24px,4vw,52px);align-items:center}
+@media(max-width:900px){#hl .ba-feature{grid-template-columns:1fr}}
+#hl .ba{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--coal);border:1px solid var(--line-d);touch-action:none;-webkit-user-select:none;user-select:none;cursor:ew-resize}
+#hl .ba-img{position:absolute;inset:0;background-size:cover;background-position:center}
+#hl .ba-before{background-image:var(--before,none);background-color:#1A1A1D}
+#hl .ba-after{background-image:var(--after,none);background-color:#242428;-webkit-clip-path:inset(0 0 0 var(--split,50%));clip-path:inset(0 0 0 var(--split,50%))}
+#hl .ba-ph{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash)}
+#hl .ba-after .ba-ph{color:#8E8A8C}
+#hl .ba-handle{position:absolute;top:0;bottom:0;left:var(--split,50%);width:2px;background:var(--red);z-index:4;pointer-events:none}
+#hl .ba-knob{position:absolute;top:50%;left:var(--split,50%);transform:translate(-50%,-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:var(--red);display:grid;place-items:center;pointer-events:none;box-shadow:0 0 0 1px rgba(237,235,233,.35),0 6px 22px rgba(0,0,0,.55)}
+#hl .ba-knob svg{width:18px;height:18px;fill:#fff}
+#hl .ba-tag{position:absolute;top:16px;z-index:6;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--bone);background:rgba(10,10,11,.6);padding:6px 11px;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+#hl .ba-tag.l{left:16px}
+#hl .ba-tag.r{right:16px}
+
+#hl .ba-facts h3{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:6px;color:var(--bone)}
+#hl .ba-facts .role{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--red-lt);margin-bottom:22px}
+#hl .ba-facts dl{border-top:1px solid var(--line-d)}
+#hl .ba-facts .row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line-d);font-size:14px}
+#hl .ba-facts dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ash)}
+#hl .ba-facts dd{color:var(--bone);font-weight:400}
+#hl .ba-facts blockquote{margin-top:24px;font-size:16px;line-height:1.55;color:var(--mist);border-left:2px solid var(--red);padding-left:18px}
+
+/* ---------- logo lockups ---------- */
+#hl .hero-logo{height:clamp(48px,6vw,74px);width:auto;max-width:78%;margin:0 auto 18px;display:block;object-fit:contain}
+#hl .final-logo{height:clamp(34px,4vw,46px);width:auto;max-width:60%;margin:0 auto 20px;display:block;opacity:.85;object-fit:contain}
+#hl .foot-brand{display:flex;align-items:center;gap:16px}
+#hl .foot-logo{height:30px;width:auto;max-width:150px;display:block;opacity:.92;object-fit:contain}
+@media(max-width:600px){#hl .hero-logo{height:44px}#hl .foot-logo{height:24px}#hl .foot-brand{gap:12px}}
+
+/* ---------- proof band under the VSL ---------- */
+#hl .proof{background:var(--coal);border-top:1px solid rgba(176,27,35,.35);padding:clamp(44px,6vw,68px) 0 clamp(38px,5vw,54px);position:relative;overflow:hidden}
+#hl .proof-head{text-align:center;margin-bottom:6px}
+#hl .proof-head .h2{font-size:clamp(24px,3.2vw,38px);margin-top:14px;color:var(--bone)}
+#hl .proof .m-note{margin-top:26px}
+
+/* ---------- transformation marquee ---------- */
+#hl .marquee{position:relative;margin-top:26px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
+#hl .marquee + .marquee{margin-top:16px}
+#hl .mtrack{display:flex;gap:16px;width:max-content;will-change:transform}
+#hl .mtrack.a{animation:hl-slide-a 78s linear infinite}
+#hl .mtrack.b{animation:hl-slide-b 94s linear infinite}
+#hl .marquee:hover .mtrack,#hl .marquee:focus-within .mtrack{animation-play-state:paused}
+@keyframes hl-slide-a{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes hl-slide-b{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+#hl .mcard{flex:0 0 auto;height:230px;border:1px solid var(--line-d);overflow:hidden;background:var(--coal);position:relative}
+#hl .mcard img{height:100%;width:auto;display:block;object-fit:cover}
+#hl .mcard::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red);opacity:0;transition:opacity .3s}
+#hl .mcard:hover::after{opacity:1}
+#hl .m-note{margin-top:22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);text-align:center}
+@media(max-width:700px){#hl .mcard{height:180px}}
+@media (prefers-reduced-motion:reduce){
+  #hl .marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none;scrollbar-width:thin}
+  #hl .mtrack.a,#hl .mtrack.b{animation:none}
+}
+
+/* ---------- manifesto band ---------- */
+#hl .manifesto{background:var(--ink);position:relative;overflow:hidden;padding:clamp(80px,12vw,150px) 0;text-align:center}
+#hl .manifesto::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(60% 100% at 50% 50%,rgba(176,27,35,.22),rgba(10,10,11,0) 72%)}
+#hl .manifesto .wrap{position:relative;z-index:2}
+#hl .manifesto .rulet{width:38px;height:2px;background:var(--red);margin:0 auto 34px}
+#hl .manifesto p{font-family:var(--display);font-weight:700;text-transform:uppercase;
+  font-size:clamp(26px,4.6vw,58px);line-height:1.02;letter-spacing:-.03em;color:var(--bone);max-width:20ch;margin:0 auto}
+#hl .manifesto p em{font-style:normal;font-weight:400;color:var(--red-lt);display:block}
+#hl .manifesto .attrib{margin-top:34px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ash)}
+
+/* ---------- hero client quote band ---------- */
+#hl .bigquote{background:var(--paper);color:var(--ink);padding:clamp(70px,10vw,120px) 0;text-align:center;position:relative}
+#hl .bigquote .rulet{width:38px;height:2px;background:var(--red);margin:0 auto 32px}
+#hl .bigquote blockquote{font-family:var(--display);font-weight:600;
+  font-size:clamp(22px,3.6vw,44px);line-height:1.12;letter-spacing:-.028em;max-width:22ch;margin:0 auto;color:var(--ink)}
+#hl .bigquote blockquote span{color:var(--red)}
+#hl .bigquote footer{margin-top:30px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:#7A7674}
+
+/* ---------- expanded bio ---------- */
+#hl .bio{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,68px);align-items:start;position:relative;z-index:2}
+#hl .bio-media{position:sticky;top:24px}
+#hl .bio-media .photo{aspect-ratio:1/1;margin-bottom:14px}
+#hl .bio-cred{border-top:1px solid var(--line-d)}
+#hl .bio-cred div{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-d);
+  font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase}
+#hl .bio-cred dt{color:var(--ash)}
+#hl .bio-cred dd{color:var(--bone)}
+#hl .bio h3{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.4vw,27px);letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--bone);margin:34px 0 14px}
+#hl .bio p{font-size:15.5px;line-height:1.68;color:var(--mist);max-width:56ch;margin-bottom:15px}
+#hl .bio p strong{color:var(--bone);font-weight:500}
+#hl .bio .kicker{font-family:var(--display);font-weight:600;font-size:clamp(18px,2.1vw,23px);line-height:1.3;
+  letter-spacing:-.015em;color:var(--bone);border-left:2px solid var(--red);padding-left:20px;margin:26px 0}
+@media(max-width:860px){#hl .bio{grid-template-columns:1fr}#hl .bio-media{position:static}#hl .bio-media .photo{aspect-ratio:1/1}}
+
+/* ---------- message screenshots ---------- */
+#hl .msgs{margin-top:24px}
+#hl .msg-row{display:flex;gap:16px;align-items:flex-start;overflow-x:auto;padding:4px 0 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+#hl .msg-row::-webkit-scrollbar{height:6px}
+#hl .msg-row::-webkit-scrollbar-track{background:rgba(237,235,233,.06)}
+#hl .msg-row::-webkit-scrollbar-thumb{background:var(--red)}
+#hl .msgcard{flex:0 0 300px;scroll-snap-align:start;background:#fff;border:1px solid var(--line-d);align-self:flex-start}
+#hl .msgcard img{width:100%;height:auto;display:block}
+@media(max-width:700px){#hl .msgcard{flex:0 0 250px}}
+
+/* ---------- phases ---------- */
+#hl .phases{margin-top:56px;position:relative;z-index:2;border-top:1px solid var(--line-d)}
+#hl .phase{display:grid;grid-template-columns:120px 1fr 1.4fr;gap:clamp(16px,3vw,44px);
+  padding:34px 0;border-bottom:1px solid var(--line-d);align-items:start}
+#hl .phase .pn{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red-lt);padding-top:5px}
+#hl .phase h3{font-family:var(--display);font-weight:700;font-size:clamp(19px,2.2vw,25px);letter-spacing:-.02em;text-transform:uppercase;color:var(--bone);line-height:1.05}
+#hl .phase .wk{display:block;margin-top:8px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+#hl .phase p{font-size:15px;line-height:1.6;color:var(--mist)}
+#hl .phase ul{margin-top:14px;display:grid;gap:8px}
+#hl .phase li{font-size:14px;color:var(--mist);padding-left:18px;position:relative}
+#hl .phase li::before{content:'';position:absolute;left:0;top:9px;width:7px;height:1px;background:var(--red)}
+@media(max-width:820px){#hl .phase{grid-template-columns:1fr;gap:12px;padding:28px 0}#hl .phase .pn{padding-top:0}}
+
+/* ---------- 10-slot video row ---------- */
+#hl .vrow{display:flex;gap:18px;overflow-x:auto;margin-top:48px;padding:4px 0 20px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;position:relative;z-index:2}
+#hl .vrow::-webkit-scrollbar{height:6px}
+#hl .vrow::-webkit-scrollbar-track{background:rgba(237,235,233,.06)}
+#hl .vrow::-webkit-scrollbar-thumb{background:var(--red)}
+#hl .vrow .vcard{flex:0 0 clamp(240px,26vw,300px);scroll-snap-align:start}
+#hl .vhint{margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+
+/* ---------- compare ---------- */
+#hl .compare{display:grid;grid-template-columns:1fr 1fr;margin-top:56px;border-top:1px solid var(--line-l);position:relative;z-index:2}
+#hl .col{padding:38px 40px 42px}
+#hl .col:first-child{border-right:1px solid var(--line-l)}
+#hl .col h3{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;margin-bottom:24px}
+#hl .col:first-child h3{color:#8B8785}
+#hl .col:last-child h3{color:var(--red)}
+#hl .col ul{display:grid;gap:16px}
+#hl .col li{font-size:15.5px;line-height:1.55;padding-left:22px;position:relative;color:#6E6A68}
+#hl .col li::before{content:'';position:absolute;left:0;top:10px;width:9px;height:1px;background:#B3AEAA}
+#hl .col:last-child li{color:var(--ink)}
+#hl .col:last-child li::before{background:var(--red)}
+@media(max-width:800px){#hl .compare{grid-template-columns:1fr}#hl .col{padding:32px 0}#hl .col:first-child{border-right:0;border-bottom:1px solid var(--line-l)}}
+
+/* ---------- day rail ---------- */
+#hl .day .wrap{position:relative;z-index:2}
+#hl .rail{margin-top:64px;position:relative}
+#hl .rail::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,rgba(176,27,35,0),rgba(176,27,35,.75) 8%,rgba(176,27,35,.75) 92%,rgba(176,27,35,0))}
+#hl .tick{display:grid;grid-template-columns:1fr 92px 1fr;align-items:start;padding:26px 0}
+#hl .tick .time{grid-column:2;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--red-lt);padding-top:2px}
+#hl .tick .time::after{content:'';display:block;width:7px;height:7px;margin:12px auto 0;background:var(--red);transform:rotate(45deg)}
+#hl .tick .body{max-width:38ch}
+#hl .tick.left .body{grid-column:1;text-align:right;justify-self:end}
+#hl .tick.right .body{grid-column:3;text-align:left}
+#hl .tick h4{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em;text-transform:uppercase;margin-bottom:7px;color:var(--bone)}
+#hl .tick p{font-size:15px;color:var(--mist);line-height:1.55}
+@media(max-width:800px){
+  #hl .rail::before{left:8px}
+  #hl .tick{grid-template-columns:8px 1fr;gap:0 26px;padding:20px 0}
+  #hl .tick .time{grid-column:1;grid-row:1;text-align:left;transform:translateX(-50%);white-space:nowrap;padding-top:0;position:relative;top:-2px}
+  #hl .tick .time::after{display:none}
+  #hl .tick .body,#hl .tick.left .body,#hl .tick.right .body{grid-column:2;grid-row:1;text-align:left;justify-self:start;max-width:none}
+}
+
+/* ---------- included ---------- */
+#hl .grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:56px;background:var(--line-l);position:relative;z-index:2}
+#hl .card{background:var(--paper);padding:40px 38px 44px}
+#hl .card .num{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--red);display:block;margin-bottom:20px}
+#hl .card h3{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.015em;text-transform:uppercase;margin-bottom:12px;color:var(--ink)}
+#hl .card p{font-size:15px;color:var(--graphite);line-height:1.6}
+@media(max-width:800px){#hl .grid4{grid-template-columns:1fr}#hl .card{padding:32px 26px 36px}}
+
+/* ---------- video testimonials ---------- */
+#hl .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;position:relative;z-index:2}
+@media(max-width:900px){#hl .vgrid{grid-template-columns:1fr 1fr;gap:16px}}
+@media(max-width:620px){#hl .vgrid{grid-template-columns:1fr}}
+#hl .vcard{border:1px solid var(--line-d);background:var(--coal)}
+#hl .vcard .player{aspect-ratio:4/5}
+#hl .vcard .play{width:62px;height:62px}
+#hl .vcard .play svg{width:18px;height:18px}
+#hl .vcard .cap{padding:18px 20px 22px;border-top:1px solid var(--line-d)}
+#hl .vcard .cap b{display:block;font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:-.01em;text-transform:uppercase;color:var(--bone)}
+#hl .vcard .cap .role{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-lt);margin-top:5px}
+#hl .vcard .cap p{margin-top:11px;font-size:14px;line-height:1.55;color:var(--mist)}
+#hl .vcard .runtime{position:absolute;right:14px;bottom:14px;z-index:3;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--bone);background:rgba(10,10,11,.6);padding:4px 8px}
+
+/* ---------- wins ---------- */
+#hl .wins{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;background:var(--line-l);position:relative;z-index:2}
+@media(max-width:900px){#hl .wins{grid-template-columns:1fr}}
+#hl .win{background:var(--paper);padding:34px 30px 32px;display:flex;flex-direction:column}
+#hl .win .metric{font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:-.03em;color:var(--red);line-height:1;margin-bottom:16px}
+#hl .win p{font-size:15px;line-height:1.6;color:#26262A;flex:1}
+#hl .win footer{margin-top:22px;padding-top:16px;border-top:1px solid var(--line-l);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7A7674}
+
+
+/* ---------- long-form quote cards (dark) ---------- */
+#hl .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;position:relative;z-index:2}
+@media(max-width:900px){#hl .qgrid{grid-template-columns:1fr}}
+#hl .qcard{border:1px solid var(--line-d);background:var(--coal);padding:32px 30px 30px;display:flex;flex-direction:column}
+#hl .qcard .mark{width:26px;height:2px;background:var(--red);margin-bottom:22px}
+#hl .qcard p{font-size:15px;line-height:1.62;color:var(--bone);flex:1}
+#hl .qcard p + p{margin-top:12px;color:var(--mist)}
+#hl .qcard footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash)}
+#hl .win .metric.sm{font-size:21px;letter-spacing:-.01em;line-height:1.15}
+#hl .win .metric.md{font-size:27px}
+
+/* ---------- coach ---------- */
+#hl .coach .wrap{position:relative;z-index:2}
+#hl .coach-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,72px);align-items:center}
+#hl .photo{aspect-ratio:4/5;background:radial-gradient(80% 60% at 50% 22%,rgba(176,27,35,.32),rgba(10,10,11,1)),var(--coal);border:1px solid var(--line-d);display:flex;align-items:flex-end;padding:22px;background-size:cover;background-position:center}
+#hl .photo span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+#hl .coach blockquote{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.4vw,28px);line-height:1.24;letter-spacing:-.02em;margin:24px 0 26px;max-width:24ch;color:var(--bone);border-left:2px solid var(--red);padding-left:22px}
+#hl .coach p{font-size:15.5px;color:var(--mist);max-width:52ch;margin-bottom:16px}
+#hl .sig{margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ash)}
+@media(max-width:840px){#hl .coach-in{grid-template-columns:1fr}#hl .photo{aspect-ratio:3/2}}
+
+/* ---------- faq ---------- */
+#hl .faq{max-width:820px;margin-top:48px;border-top:1px solid var(--line-l);position:relative;z-index:2}
+#hl details{border-bottom:1px solid var(--line-l)}
+#hl summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;position:relative;font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:-.01em;color:var(--ink)}
+#hl summary::-webkit-details-marker{display:none}
+#hl summary::after{content:'+';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:18px;color:var(--red)}
+#hl details[open] summary::after{content:'\2013'}
+#hl details p{padding:0 44px 28px 0;font-size:15.5px;color:var(--graphite);max-width:66ch}
+
+/* ---------- final ---------- */
+#hl .final{text-align:center;background:var(--ink)}
+#hl .final::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(70% 100% at 50% 100%,rgba(176,27,35,.28),rgba(10,10,11,0) 70%)}
+#hl .final .wrap{position:relative;z-index:2}
+#hl .final .h2{max-width:18ch;margin:18px auto 22px;color:var(--bone)}
+#hl .final p{color:var(--mist);max-width:48ch;margin:0 auto 36px;font-size:16px}
+
+/* ---------- footer band ---------- */
+#hl .foot{background:#060607;color:var(--ash);padding:38px 0;border-top:1px solid rgba(176,27,35,.3)}
+#hl .foot-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+#hl .foot a:hover{color:var(--bone)}
+#hl .foot .links{display:flex;gap:26px;flex-wrap:wrap}
+#hl .disclaimer{margin-top:18px;font-size:11px;letter-spacing:0;text-transform:none;color:#4B484D;max-width:70ch;line-height:1.6}
+
+/* ---------- proof tags ---------- */
+#hl .proof-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 14px;margin-top:22px}
+#hl .proof-tags span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);border:1px solid var(--line-d);padding:8px 14px;position:relative}
+#hl .proof-tags span::before{content:'';display:inline-block;width:9px;height:8px;margin-right:9px;vertical-align:-1px;background:repeating-linear-gradient(115deg,var(--red) 0 2px,transparent 2px 5px)}
+
+/* ---------- apply steps ---------- */
+#hl .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-d);border:1px solid var(--line-d);max-width:880px;margin:0 auto 34px;text-align:left}
+#hl .steps li{background:var(--coal);padding:22px 26px;position:relative;overflow:hidden}
+#hl .steps li::after{content:'';position:absolute;right:-14px;top:-14px;width:44px;height:44px;background:repeating-linear-gradient(115deg,rgba(176,27,35,.4) 0 3px,transparent 3px 11px);opacity:.5}
+#hl .steps b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--red-lt);margin-bottom:9px}
+#hl .steps strong{display:block;font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em;text-transform:uppercase;color:var(--bone)}
+#hl .steps span{display:block;margin-top:6px;font-size:13px;color:var(--mist);font-weight:300}
+@media(max-width:700px){#hl .steps{grid-template-columns:1fr}}
+
+/* ---------- microinteractions + hover transforms ---------- */
+#hl .card,#hl .win,#hl .qcard,#hl .msgcard,#hl .vcard,#hl .stat{transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s ease,border-color .35s ease}
+#hl .card:hover,#hl .win:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(10,10,11,.16)}
+#hl .win{position:relative;overflow:hidden}
+#hl .win::before{content:'';position:absolute;left:0;top:0;width:0;height:3px;background:var(--red);transition:width .4s cubic-bezier(.22,.61,.36,1)}
+#hl .win:hover::before{width:100%}
+#hl .qcard:hover{transform:translateY(-4px);border-color:rgba(176,27,35,.55)}
+#hl .vcard:hover{transform:translateY(-4px);border-color:rgba(176,27,35,.6)}
+#hl .msgcard:hover{transform:translateY(-4px) rotate(-.4deg)}
+#hl .mcard img{transition:transform .5s cubic-bezier(.22,.61,.36,1)}
+#hl .mcard:hover img{transform:scale(1.05)}
+#hl summary::after{transition:transform .25s ease}
+
+/* ---------- cinematic motion (skipped entirely under reduced motion) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  #hl .hero .hero-logo,#hl .hero .claw,#hl .hero .eyebrow,#hl .hero h1,#hl .hero .sub,#hl .hero .hero-cta,#hl .hero .hero-note{opacity:0;transform:translateY(26px);animation:hl-rise .85s cubic-bezier(.22,.61,.36,1) forwards}
+  #hl .hero .hero-logo{animation-delay:.05s}
+  #hl .hero .claw{animation-delay:.16s}
+  #hl .hero .eyebrow{animation-delay:.24s}
+  #hl .hero h1{animation-delay:.34s}
+  #hl .hero .sub{animation-delay:.52s}
+  #hl .hero .hero-cta{animation-delay:.68s}
+  #hl .hero .hero-note{animation-delay:.82s}
+  @keyframes hl-rise{to{opacity:1;transform:none}}
+
+  #hl .rv{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);transition-delay:var(--rvd,0s)}
+  #hl .rv.in{opacity:1;transform:none}
+  #hl .sec-head.rv .h2,#hl .proof-head.rv .h2{clip-path:inset(0 100% 0 0);transition:clip-path .9s cubic-bezier(.22,.61,.36,1) .15s}
+  #hl .sec-head.rv.in .h2,#hl .proof-head.rv.in .h2{clip-path:inset(0 0 0 0)}
+  #hl .sec-head.rv::before,#hl .proof-head.rv::before{width:0;transition:width .55s ease .05s}
+  #hl .sec-head.rv.in::before,#hl .proof-head.rv.in::before{width:46px}
+
+  #hl .hero-bg{will-change:transform}
+  #hl .progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--red),var(--red-lt));z-index:99;pointer-events:none}
+  #hl .manifesto::after{animation:hl-pulse 6s ease-in-out infinite}
+  @keyframes hl-pulse{0%,100%{opacity:.7}50%{opacity:1}}
+}
+</style>
+</head><body style='margin:0'><!-- ===================================================================
+     HYBRID LIFE — GHL BLOCK 2 of 3 : PAGE BODY
+     Paste into: a single full-width Custom Code / HTML element
+     Section settings: full width, padding 0, margin 0, background none
+     No <html>, <head>, <body> tags — this is a fragment on purpose.
+     =================================================================== -->
+
+<div id="hl">
+
+  <!-- ============ HERO + VSL ============ -->
+  <section class="hero" id="hl-top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <img class="hero-logo" src="/assets/logo.png" alt="Hybrid Life Coaching">
+      <span class="claw" aria-hidden="true"><i></i><i></i><i></i></span>
+      <p class="eyebrow">100% online &middot; 1:1 hybrid coaching</p>
+      <h1>
+        Level up your athleticism, body, and mind
+        <em>without giving up your life</em>
+      </h1>
+      <p class="sub">You have a business, a job, a calendar full of travel and dinners you're not cancelling. Hybrid coaching builds the body and the mindset around that life instead of asking you to pause it.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="https://form.typeform.com/to/hy1Nv6Og" target="_blank" rel="noopener noreferrer">Apply here</a>
+        <a class="btn btn-ghost" href="#hl-results">See client results</a>
+      </div>
+      <p class="hero-note">Applications reviewed personally &middot; Limited roster</p>
+    </div>
+  </section>
+
+  <!-- ============ PROOF STRIP (under the VSL) ============ -->
+  <section class="proof" id="hl-results">
+    <div class="wrap proof-head">
+      <p class="eyebrow">Client transformations</p>
+      <h2 class="h2">Different jobs. Different families. <em>Same problem.</em></h2>
+      <div class="proof-tags">
+        <span>28 documented transformations</span>
+        <span>12 unedited check-in messages</span>
+        <span>Shared with permission</span>
+      </div>
+    </div>
+    <div class="marquee">
+      <div class="mtrack a">
+        <div class="mcard"><img src="/assets/t-01.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-02.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-03.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-04.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-05.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-06.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-07.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-08.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-09.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-10.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-11.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-12.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-13.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-14.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-01.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-02.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-03.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-04.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-05.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-06.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-07.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-08.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-09.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-10.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-11.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-12.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-13.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-14.jpg" alt="Client transformation" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="marquee">
+      <div class="mtrack b">
+        <div class="mcard"><img src="/assets/t-15.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-16.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-17.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-18.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-19.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-20.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-21.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-22.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-23.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-24.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-25.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-26.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-27.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-28.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-15.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-16.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-17.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-18.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-19.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-20.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-21.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-22.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-23.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-24.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-25.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-26.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-27.jpg" alt="Client transformation" loading="lazy"></div>
+        <div class="mcard"><img src="/assets/t-28.jpg" alt="Client transformation" loading="lazy"></div>
+      </div>
+    </div>
+    <p class="m-note">Business owners &middot; Shift workers &middot; Parents &middot; Frequent travellers &middot; Hover to pause</p>
+  </section>
+
+  <!-- ============ STRIP ============ -->
+  <div class="strip">
+    <div class="strip-in">
+      <div class="stat"><b>1:1</b><span>Never a template</span></div>
+      <div class="stat"><b>7 days</b><span>Coach access, not a portal</span></div>
+      <div class="stat"><b>100%</b><span>Online &mdash; wherever you are</span></div>
+    </div>
+  </div>
+
+  <!-- ============ CLIENT MESSAGES ============ -->
+  <section class="sec light">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Straight from the check-ins</p>
+        <h2 class="h2">The messages <em>that come in</em></h2>
+        <p class="lede">Unedited, apart from removing last names. Scroll sideways to read them.</p>
+      </div>
+      <div class="msgs">
+        <div class="msg-row">
+          <div class="msgcard"><img src="/assets/msg-01.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-02.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-03.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-04.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-05.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-06.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-07.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-08.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-09.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-10.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-11.jpg" alt="Client check-in message"></div>
+          <div class="msgcard"><img src="/assets/msg-12.jpg" alt="Client check-in message"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METHOD ============ -->
+  <section class="sec light" id="hl-method">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The problem with every plan you've tried</p>
+        <h2 class="h2">Most programs are built for someone <em>with nothing else on</em></h2>
+        <p class="lede">Six meals a day. Ninety minutes under the bar. No dinners out, no red-eyes, no season where the business eats the week. It works right up until your real life shows up — and then it's you who feels like the failure.</p>
+      </div>
+      <div class="compare">
+        <div class="col">
+          <h3>What a standard plan assumes</h3>
+          <ul>
+            <li>You can train 5&ndash;6 days, an hour-plus, at the same time each day</li>
+            <li>Every meal is cooked at home and weighed</li>
+            <li>Travel weeks and work dinners are "off plan" — start again Monday</li>
+            <li>Progress is measured by the scale alone</li>
+            <li>Questions get answered by a chatbot or a Monday form</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>How Hybrid Life is built</h3>
+          <ul>
+            <li>Sessions sized to the day you're having — 40 minutes counts</li>
+            <li>A restaurant and travel playbook written before you need it</li>
+            <li>Calories that cycle with your week instead of ignoring it</li>
+            <li>Body composition, energy, lifts, sleep and mindset — not one number</li>
+            <li>You text your coach. Your coach texts back.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO TESTIMONIALS ============ -->
+  <section class="sec" id="hl-stories">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">In their own words</p>
+        <h2 class="h2">Hear it from <em>the people who did it</em></h2>
+        <p class="lede">Unscripted. Recorded on phones, mostly at kitchen tables.</p>
+      </div>
+
+      <!-- Grid is rendered here from testimonialVideos in config.js -->
+    </div>
+  </section>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="manifesto">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="rulet"></div>
+      <p>Discipline was never your problem.<em>Your plan just never accounted for your life.</em></p>
+      <p class="attrib">The Hybrid Life principle</p>
+    </div>
+  </section>
+
+  <!-- ============ A DAY ============ -->
+  <section class="sec coach" id="hl-coach">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:44px">
+        <p class="eyebrow">Your coach</p>
+        <h2 class="h2">Why I built <em>Hybrid Life</em></h2>
+      </div>
+
+      <div class="bio">
+        <div class="bio-media">
+          <div class="photo" id="hl-portrait"><span>Portrait — 4:5</span></div>
+          <dl class="bio-cred">
+            <div data-cred="coachingSince"><dt>Coaching since</dt><dd></dd></div>
+            <div data-cred="clientsCoached"><dt>Clients coached</dt><dd></dd></div>
+            <div><dt>Format</dt><dd>100% online, 1:1</dd></div>
+            <div data-cred="certifications"><dt>Certifications</dt><dd></dd></div>
+          </dl>
+        </div>
+
+        <div>
+          <p><strong>Seven years ago, I started posting my fitness journey every single day.</strong></p>
+          <p>At the time, I had no idea where it would lead. I was bouncing between jobs, trying different businesses, and searching for something I could truly build my life around. The one thing I always came back to was fitness.</p>
+          <p>But my relationship with fitness wasn't always healthy.</p>
+          <p>For years, I trained like a bodybuilder and built my entire life around the gym. No balance. No real structure. Eating out made me feel guilty. Missing a workout felt like failure. I could be in great shape physically while mentally feeling completely lost.</p>
+          <p>There were periods where I was depressed, uncertain about my future, and putting everything I had into becoming better physically because it was one of the few things I felt like I could control.</p>
+
+          <div class="kicker">Eventually, I realized I didn't want fitness to be my entire life. I wanted fitness to make my life better.</div>
+
+          <p>That's when I discovered hybrid training and everything started to change.</p>
+          <p>I learned how to lift, run, eat, travel, go out, build a business, and still make progress &mdash; without the constant guilt of feeling like I was doing something wrong.</p>
+          <p>And after seven years of documenting my own journey, that became the foundation of Hybrid Life Coaching.</p>
+          <p><strong>You shouldn't have to choose between being in incredible shape and actually enjoying your life. The goal is to build both.</strong></p>
+
+          <p class="sig">Myles Harris &middot; Founder, Hybrid Life Coaching</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec" id="hl-phases">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How the program runs</p>
+        <h2 class="h2">Four phases, <em>in order</em></h2>
+        <p class="lede">Nobody starts at the hardest setting. Each phase earns the next one, so the plan gets more demanding only as your life proves it can hold it.</p>
+      </div>
+
+      <div class="phases">
+        <div class="phase">
+          <div class="pn">Phase 01</div>
+          <div><h3>Audit</h3><span class="wk">Weeks 1&ndash;2</span></div>
+          <div>
+            <p>Before anything changes, we find out what's actually happening. Most people aren't failing their plan — they're on the wrong one for their real energy expenditure.</p>
+            <ul>
+              <li>Full TDEE and intake audit against your actual week</li>
+              <li>Baseline photos, measurements, lifts, sleep and stress</li>
+              <li>Your calendar mapped — travel, dinners, busy seasons</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="pn">Phase 02</div>
+          <div><h3>Build the system</h3><span class="wk">Weeks 3&ndash;8</span></div>
+          <div>
+            <p>The structure goes in. This phase is about making the plan survive a bad week, not about maximum aggression.</p>
+            <ul>
+              <li>Custom nutrition document and training block built around your schedule</li>
+              <li>Restaurant, travel and weekend playbooks written before you need them</li>
+              <li>Weekly check-ins start; we adjust off data, not feel</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="pn">Phase 03</div>
+          <div><h3>Push</h3><span class="wk">Weeks 9&ndash;16</span></div>
+          <div>
+            <p>Now we go after the number you've been stuck at. Calories cycle with your week, training intensity climbs, and the plateau breaks.</p>
+            <ul>
+              <li>Carb cycling and day-type structure matched to training load</li>
+              <li>Progressive overload with a short version of every session</li>
+              <li>Mindset work on the decisions that used to derail you</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="pn">Phase 04</div>
+          <div><h3>Make it permanent</h3><span class="wk">Week 17 onward</span></div>
+          <div>
+            <p>The phase most programs skip, and the reason most results don't last. You leave able to run this yourself.</p>
+            <ul>
+              <li>Calories brought back up deliberately instead of by accident</li>
+              <li>Move from weighing food to portions you can eyeball anywhere</li>
+              <li>You learn the why behind every adjustment, so you can make them alone</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WINS ============ -->
+  <section class="sec light">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Client wins &middot; real check-in messages</p>
+        <h2 class="h2">Numbers they hadn't seen <em>in years</em></h2>
+        <p class="lede">Almost every client says a version of the same thing: it isn't a number they've never hit. It's a number they'd stopped believing they'd see again.</p>
+      </div>
+      <div class="wins">
+        <div class="win">
+          <div class="metric sm">5 years<br>stuck</div>
+          <p>"I haven't seen 214 in over four or five years, easily. My mindset has gotten stronger and way better as well."</p>
+          <footer>Anthony &middot; Under one month in</footer>
+        </div>
+        <div class="win">
+          <div class="metric">41 lbs</div>
+          <p>"Pre-COVID. That's the last time I was in the 170s. Forty-one pounds down total since working with you."</p>
+          <footer>Bria &middot; Plateau broken</footer>
+        </div>
+        <div class="win">
+          <div class="metric sm">228 lbs<br>&amp; 14-hr days</div>
+          <p>"228.1 this morning. Last time I was in the 220s was end of '24, early '25."</p>
+          <footer>Lief &middot; Full-time work and family</footer>
+        </div>
+        <div class="win">
+          <div class="metric md">205 &rarr; 250</div>
+          <p>"Despite cutting calories, my squat has gone up from 205 to 250 in such a short amount of time. First set at eight reps, first attempt."</p>
+          <footer>David &middot; Strength up while cutting</footer>
+        </div>
+        <div class="win">
+          <div class="metric md">225 &times; 2</div>
+          <p>"First 225 for two since I started your program. Before this, 135 was my max because of a herniated disc a few years back."</p>
+          <footer>Client &middot; Returning from back injury</footer>
+        </div>
+        <div class="win">
+          <div class="metric sm">First 5K<br>ever</div>
+          <p>"Back after the bachelor party and running on fumes, but got the run in and some meal prep beforehand. I've never run a 5K in my life."</p>
+          <footer>Client &middot; First distance run</footer>
+        </div>
+        <div class="win">
+          <div class="metric sm">Lowest<br>since 2019</div>
+          <p>"Weighed in at 232.5. Lowest since 2019."</p>
+          <footer>Marcel &middot; Six-year low</footer>
+        </div>
+        <div class="win">
+          <div class="metric">159.4</div>
+          <p>"I've dieted on my own before and always rebounded before hitting the 150s. After two years I finally did it with your coaching."</p>
+          <footer>Client &middot; Two-year rebound cycle ended</footer>
+        </div>
+        <div class="win">
+          <div class="metric sm">XL &rarr;<br>Medium</div>
+          <p>"217 pounds. Twenty-nine down, and I fit in a medium shirt when I used to be in an XL."</p>
+          <footer>Client &middot; 29 lbs down</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COACH ============ -->
+  <section class="sec light" id="hl-faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Before you apply</p>
+        <h2 class="h2">The questions <em>everyone asks</em></h2>
+      </div>
+      <div class="faq">
+        <details open><summary>I travel constantly. Is this going to work?</summary><p>It's the reason the program exists. Travel weeks get their own structure — airport and hotel options, a lower-equipment training block, and adjusted targets so a trip is a planned phase rather than a hole in the data.</p></details>
+        <details><summary>How does online coaching actually work?</summary><p>Everything runs through your phone. Training and video demos live in the app, your nutrition plan arrives as a document you can print or keep on screen, check-ins are a short weekly form, and messaging is direct to me. No gym visits, no fixed session times, no time zone problem.</p></details>
+        <details><summary>I eat out and travel constantly for work. Does that ruin it?</summary><p>No — it's planned for. You get a restaurant playbook covering steakhouse, sushi, airport and the place with nothing on the menu, plus a travel structure with hotel and low-equipment training. Work dinners are part of the plan, not a break from it.</p></details>
+        <details><summary>How much time do I need in the gym?</summary><p>Three to four sessions a week, 40&ndash;60 minutes. Every session also has a compressed version for days that collapse. Consistency at 40 minutes outperforms perfection at ninety.</p></details>
+        <details><summary>Do I have to weigh my food?</summary><p>At the start, for a short period, so we're working from real numbers instead of guesses. Most clients move to portion-based eating within the first phase once the calibration is done.</p></details>
+        <details><summary>What does it cost?</summary><p>Pricing depends on the length of the engagement and is covered on the call. Coaching is a considered purchase, and the application exists so neither of us spends time on a bad fit.</p></details>
+        <details><summary>What happens after I apply?</summary><p>You'll answer a short set of questions about your goals, schedule and history. I read every one myself. If it looks like a fit, I'll message you on Instagram and we'll set up a call from there. If it isn't, I'll tell you that and point you somewhere better.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="sec final" id="hl-apply">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap">
+      <img class="final-logo" src="/assets/logo.png" alt="">
+      <p class="eyebrow">Applications open</p>
+      <h2 class="h2">Level up the body and the mind <em>without giving up the life</em></h2>
+      <p>Tell me about your goals and your schedule. If I can help, we'll get on a call. If I can't, I'll say so.</p>
+
+      <ol class="steps">
+        <li><b>Step 01</b><strong>Apply</strong><span>Two minutes. No payment.</span></li>
+        <li><b>Step 02</b><strong>Qualify</strong><span>I review every application personally, same day.</span></li>
+        <li><b>Step 03</b><strong>We talk</strong><span>If you're a fit, I message you on Instagram to set up the call.</span></li>
+      </ol>
+
+      <a class="btn btn-solid" href="https://form.typeform.com/to/hy1Nv6Og" target="_blank" rel="noopener noreferrer">Apply here</a>
+      <p class="hero-note" style="margin-top:22px">
+        Takes about four minutes &middot; If you're a fit, I'll message you on Instagram
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER BAND ============ -->
+  <div class="foot">
+    <div class="foot-in">
+      <div class="foot-brand">
+        <img class="foot-logo" src="/assets/logo.png" alt="Hybrid Life Coaching">
+        <span>&copy; 2026 Hybrid Life Coaching</span>
+      </div>
+      <div class="links">
+        <a href="https://www.instagram.com/mylesharrisfit" target="_blank" rel="noopener">Instagram</a>
+        <a href="/privacy">Privacy policy</a>
+        <a href="/terms">Terms of service</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="disclaimer">Results shown are individual client outcomes shared with permission and are not a guarantee of results. Coaching is not medical advice; consult your physician before beginning any nutrition or training program.</p>
+    </div>
+  </div>
+
+</div>
+<!-- ===================================================================
+     HYBRID LIFE — GHL BLOCK 3 of 3 : FOOTER CODE
+     Paste into: Settings → Custom Code → Footer Tracking Code
+     (or Page Settings → Custom Code → Footer, for one page only)
+     Must load AFTER the body markup. Footer placement handles that.
+     =================================================================== -->
+
+<script>
+(function(){
+  function init(){
+    var root = document.getElementById('hl');
+    if(!root || root.dataset.hlReady) return;
+    root.dataset.hlReady = '1';
+
+    /* ---- click-to-load video facades ---- */
+    var SRC = {
+      wistia:  function(id){ return 'https://fast.wistia.net/embed/iframe/'+id+'?autoPlay=true'; },
+      vimeo:   function(id){ return 'https://player.vimeo.com/video/'+id+'?autoplay=1&title=0&byline=0&portrait=0'; },
+      youtube: function(id){ return 'https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1'; }
+    };
+
+    root.querySelectorAll('.player').forEach(function(p){
+      p.addEventListener('click', function(e){
+        e.preventDefault();
+        var prov = p.dataset.provider, id = p.dataset.id;
+        if(!SRC[prov] || !id || id.indexOf('VIDEO_ID') === 0) return; /* no ID set yet */
+        var f = document.createElement('iframe');
+        f.src = SRC[prov](id);
+        f.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
+        f.setAttribute('allowfullscreen','');
+        f.title = p.dataset.title || 'Video';
+        p.innerHTML = '';
+        p.appendChild(f);
+        p.style.cursor = 'default';
+
+        /* conversion tracking */
+        if(window.dataLayer){ window.dataLayer.push({event:'vsl_play', video_id:id}); }
+        if(window.fbq){ fbq('trackCustom','VSLPlay',{video_id:id}); }
+      });
+    });
+
+    /* ---- apply-button conversion events ---- */
+    root.querySelectorAll('a.btn-solid').forEach(function(a){
+      a.addEventListener('click', function(){
+        if(window.fbq){ fbq('track','Lead',{content_name:'apply_click'}); }
+        if(window.dataLayer){ window.dataLayer.push({event:'apply_click'}); }
+      });
+    });
+
+    /* ---- scroll-depth: tells you where people quit ---- */
+    (function(){
+      var hit={};
+      window.addEventListener('scroll', function(){
+        var pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+        [25,50,75,90].forEach(function(m){
+          if(pct >= m && !hit[m]){
+            hit[m]=1;
+            if(window.dataLayer){ window.dataLayer.push({event:'scroll_depth', depth:m}); }
+          }
+        });
+      }, {passive:true});
+    })();
+
+    /* ---- before / after slider ---- */
+    root.querySelectorAll('.ba').forEach(function(ba){
+      var dragging = false;
+      function set(pct){
+        pct = Math.max(0, Math.min(100, pct));
+        ba.style.setProperty('--split', pct + '%');
+        ba.setAttribute('aria-valuenow', Math.round(pct));
+      }
+      function fromEvent(e){
+        var r = ba.getBoundingClientRect();
+        var cx = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
+        set(((cx - r.left) / r.width) * 100);
+      }
+      ba.addEventListener('pointerdown', function(e){
+        dragging = true;
+        if(ba.setPointerCapture){ ba.setPointerCapture(e.pointerId); }
+        fromEvent(e);
+      });
+      ba.addEventListener('pointermove', function(e){ if(dragging) fromEvent(e); });
+      ba.addEventListener('pointerup', function(){ dragging = false; });
+      ba.addEventListener('pointercancel', function(){ dragging = false; });
+      ba.addEventListener('keydown', function(e){
+        var cur = parseFloat(ba.getAttribute('aria-valuenow')) || 50;
+        if(e.key === 'ArrowLeft'){ set(cur - 4); e.preventDefault(); }
+        if(e.key === 'ArrowRight'){ set(cur + 4); e.preventDefault(); }
+        if(e.key === 'Home'){ set(0); e.preventDefault(); }
+        if(e.key === 'End'){ set(100); e.preventDefault(); }
+      });
+    });
+
+    /* ---- cinematic motion: reveals, parallax, progress, magnetic CTAs ----
+       Everything here is skipped for prefers-reduced-motion users. */
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
+
+      /* scroll progress bar + hero parallax, one rAF-throttled listener */
+      var pbar = document.createElement('div');
+      pbar.className = 'progress';
+      pbar.setAttribute('aria-hidden','true');
+      root.appendChild(pbar);
+      var heroBg = root.querySelector('.hero-bg');
+      var ticking = false;
+      function onScroll(){
+        if(ticking) return;
+        ticking = true;
+        requestAnimationFrame(function(){
+          var max = document.body.scrollHeight - window.innerHeight;
+          pbar.style.transform = 'scaleX(' + (max > 0 ? window.scrollY / max : 0) + ')';
+          if(heroBg && window.scrollY < window.innerHeight * 1.3){
+            heroBg.style.transform = 'translateY(' + (window.scrollY * 0.28) + 'px) scale(1.06)';
+          }
+          ticking = false;
+        });
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+
+      /* scroll-triggered reveals with staggered entrances */
+      if('IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(en){
+            if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+
+        root.querySelectorAll('.sec-head,.proof-head,.compare,.bio-media,.msgs,.manifesto .wrap,.final .h2')
+          .forEach(function(el){ el.classList.add('rv'); io.observe(el); });
+
+        ['.strip-in .stat', '.wins .win', '.qgrid .qcard', '.phases .phase',
+         '.rail .tick', '.steps li'].forEach(function(sel){
+          root.querySelectorAll(sel).forEach(function(el, i){
+            el.classList.add('rv');
+            el.style.setProperty('--rvd', (i % 9) * 0.08 + 's');
+            io.observe(el);
+          });
+        });
+      }
+
+      /* magnetic hover on primary CTAs */
+      root.querySelectorAll('.hero-cta .btn, .final a.btn-solid').forEach(function(b){
+        b.addEventListener('mousemove', function(e){
+          var r = b.getBoundingClientRect();
+          var dx = (e.clientX - r.left - r.width / 2) / r.width;
+          var dy = (e.clientY - r.top - r.height / 2) / r.height;
+          b.style.transform = 'translate(' + (dx * 8).toFixed(1) + 'px,' + (dy * 6).toFixed(1) + 'px)';
+        });
+        b.addEventListener('mouseleave', function(){ b.style.transform = ''; });
+      });
+    }
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  /* GHL sometimes re-renders sections after load — retry once */
+  setTimeout(init, 1200);
+})();
+</script>
+<script src="/site.js"></script>
+</body>
+</html>
