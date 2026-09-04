@@ -63,6 +63,21 @@
 /* video slots with no ID yet are hidden by footer script */
 #hl .vcard[hidden]{display:none!important}
 
+
+/* ---------- testimonial link-out cards ---------- */
+#hl .vcard a.player{text-decoration:none;display:block}
+#hl .vsrc{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:9px 12px;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--bone);background:linear-gradient(180deg,transparent,rgba(10,10,11,.85));
+  display:flex;justify-content:flex-end;pointer-events:none}
+#hl .vcard a.player:hover .play{transform:scale(1.08)}
+#hl .vcard .play{transition:transform .25s ease}
+@media(max-width:620px){
+  #hl .vcard .play{width:44px;height:44px}
+  #hl .vcard .play svg{width:14px;height:14px}
+  #hl .vsrc{font-size:8px;padding:7px 8px;letter-spacing:.08em}
+  #hl .vcard .cap p{font-size:12.5px}
+}
 </style>
 
 <!-- Tracking loads only once you put the IDs in config.js -->
@@ -361,9 +376,9 @@
 @media(max-width:800px){#hl .grid4{grid-template-columns:1fr}#hl .card{padding:32px 26px 36px}}
 
 /* ---------- video testimonials ---------- */
-#hl .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;position:relative;z-index:2}
+#hl .vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px;position:relative;z-index:2}
 @media(max-width:900px){#hl .vgrid{grid-template-columns:1fr 1fr;gap:16px}}
-@media(max-width:620px){#hl .vgrid{grid-template-columns:1fr}}
+@media(max-width:620px){#hl .vgrid{grid-template-columns:1fr 1fr;gap:12px}}
 #hl .vcard{border:1px solid var(--line-d);background:var(--coal)}
 #hl .vcard .player{aspect-ratio:4/5}
 #hl .vcard .play{width:62px;height:62px}
