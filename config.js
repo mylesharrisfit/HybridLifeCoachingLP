@@ -44,7 +44,43 @@ window.HL = {
 
      While this list is empty the whole section stays hidden.
      ───────────────────────────────────────────────────────── */
-  testimonialVideos: [],
+  /* Four cards, four across on desktop, 2x2 on phones.
+     Each entry needs a thumbnail in /assets and the post URL.
+     Links open in a new tab so the page stays behind them.
+
+       { poster:  "/assets/clip-01.jpg",
+         href:    "https://www.instagram.com/reel/XXXXXXXXX/",
+         source:  "Watch on Instagram",     // optional label
+         name:    "Marcel",
+         role:    "Business owner \u00b7 16 weeks",
+         caption: "Down 18 lbs and every lift went up." }
+
+     While this list is empty the whole section stays hidden. */
+  testimonialVideos: [
+    { poster: "/assets/clip-01.jpg",
+      href: "https://www.instagram.com/reel/Dax44RfRFMA/",
+      name: "Edgar",
+      role: "Chef, business owner, dad",
+      caption: "Scaled to $25k months and lost 25 lbs at the same time." },
+
+    { poster: "/assets/clip-02.jpg",
+      href: "https://www.instagram.com/reel/DY5FPVsPrrJ/",
+      name: "Zay",
+      role: "9-5, 6 months",
+      caption: "70 lbs down without cancelling a holiday or a night out." },
+
+    { poster: "/assets/clip-03.jpg",
+      href: "https://www.instagram.com/reel/DYX5fCbtJEx/",
+      name: "Mateo",
+      role: "Overnight shifts, dad",
+      caption: "35 lbs down with a young family and nights on the clock." },
+
+    { poster: "/assets/clip-04.jpg",
+      href: "https://www.instagram.com/reel/DYDedqXAOf6/",
+      name: "Quincey",
+      role: "Active military, 5 months",
+      caption: "50 lbs down without giving up a single weekend." },
+  ],
 
 
   /* ── TRACKING ──────────────────────────────────────────────
