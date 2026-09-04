@@ -143,7 +143,7 @@
 
 /* ---------- cinematic hero ---------- */
 #hl .hero{position:relative;background:var(--ink);overflow:hidden;min-height:min(94vh,1000px);display:flex;align-items:center;padding:clamp(72px,9vw,120px) 0}
-#hl .hero-bg{position:absolute;inset:0;background:url('/assets/hero.jpg') center 26%/cover no-repeat}
+#hl .hero-bg{position:absolute;inset:0;background:url('/assets/hero.jpg') center 50%/cover no-repeat}
 #hl .hero-bg::after{content:'';position:absolute;inset:0;
   background:
     linear-gradient(180deg,rgba(10,10,11,.82) 0%,rgba(10,10,11,.46) 32%,rgba(10,10,11,.5) 58%,rgba(7,7,8,.96) 100%),
@@ -272,7 +272,7 @@
 /* ---------- expanded bio ---------- */
 #hl .bio{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,68px);align-items:start;position:relative;z-index:2}
 #hl .bio-media{position:sticky;top:24px}
-#hl .bio-media .photo{aspect-ratio:4/5;margin-bottom:14px}
+#hl .bio-media .photo{aspect-ratio:1/1;margin-bottom:14px}
 #hl .bio-cred{border-top:1px solid var(--line-d)}
 #hl .bio-cred div{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-d);
   font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase}
@@ -284,7 +284,7 @@
 #hl .bio p strong{color:var(--bone);font-weight:500}
 #hl .bio .kicker{font-family:var(--display);font-weight:600;font-size:clamp(18px,2.1vw,23px);line-height:1.3;
   letter-spacing:-.015em;color:var(--bone);border-left:2px solid var(--red);padding-left:20px;margin:26px 0}
-@media(max-width:860px){#hl .bio{grid-template-columns:1fr}#hl .bio-media{position:static}#hl .bio-media .photo{aspect-ratio:3/2}}
+@media(max-width:860px){#hl .bio{grid-template-columns:1fr}#hl .bio-media{position:static}#hl .bio-media .photo{aspect-ratio:1/1}}
 
 /* ---------- message screenshots ---------- */
 #hl .msgs{margin-top:24px}
@@ -682,33 +682,46 @@
   </section>
 
   <!-- ============ A DAY ============ -->
-  <section class="sec day" id="hl-day">
+  <section class="sec coach" id="hl-coach">
     <div class="grain" aria-hidden="true"></div>
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">The proof is in the schedule</p>
-        <h2 class="h2">One ordinary Tuesday, <em>start to finish</em></h2>
-        <p class="lede">Not a highlight reel. A real Tuesday, including the meeting that runs over and the hour after the kids go down. If a plan can't survive those two things, it can't survive your life.</p>
+      <div class="sec-head" style="margin-bottom:44px">
+        <p class="eyebrow">Your coach</p>
+        <h2 class="h2">Why I built <em>Hybrid Life</em></h2>
       </div>
-      <div class="rail">
-        <div class="tick left"><div class="time">05:15</div><div class="body"><h4>Alarm, then water before coffee</h4><p>Sixteen ounces with electrolytes before anything else. You're mildly dehydrated every morning and it reads as tiredness, so we fix that before you diagnose yourself as unmotivated.</p></div></div>
-        <div class="tick right"><div class="time">05:40</div><div class="body"><h4>Lift &mdash; 48 minutes</h4><p>Push day. Every session in your app has a full version and a 25-minute version. You pick based on the day you're actually having, not the day you planned on Sunday.</p></div></div>
-        <div class="tick left"><div class="time">06:35</div><div class="body"><h4>Shower, shake, out</h4><p>Forty grams of protein before you've made a single decision. Breakfast was settled on Sunday so your first willpower spend of the day isn't on food.</p></div></div>
-        <div class="tick right"><div class="time">07:20</div><div class="body"><h4>School run and commute</h4><p>Nothing to manage here. This is the point &mdash; the plan doesn't ask for anything during the part of your morning that belongs to other people.</p></div></div>
-        <div class="tick left"><div class="time">08:30</div><div class="body"><h4>Back-to-back calls</h4><p>Second coffee, and it's the last one. Caffeine after noon costs you sleep, sleep costs you recovery, and recovery is what the training is actually for.</p></div></div>
-        <div class="tick right"><div class="time">10:45</div><div class="body"><h4>The gap between meetings</h4><p>Protein snack from the desk drawer, and a lap of the building. Steps aren't a workout, they're the difference between a 2,400 and 2,700 calorie day without touching your food.</p></div></div>
-        <div class="tick left"><div class="time">12:30</div><div class="body"><h4>Client lunch, steakhouse</h4><p>You order the ribeye and skip the bread basket. The restaurant guide covers this exact situation, so you're not doing arithmetic at the table in front of a prospect.</p></div></div>
-        <div class="tick right"><div class="time">14:10</div><div class="body"><h4>The wall</h4><p>It doesn't arrive today, because your carbs were placed around it rather than eaten at breakfast. Energy is a programming variable, not a personality trait.</p></div></div>
-        <div class="tick left"><div class="time">16:15</div><div class="body"><h4>The meeting runs long</h4><p>Your planned walk disappears. This is the moment most plans break &mdash; and the reason yours has a rule for it: you don't make it up, you don't compensate at dinner, you just carry on. One missed walk is noise, not failure.</p></div></div>
-        <div class="tick right"><div class="time">18:30</div><div class="body"><h4>Dinner with the family</h4><p>Same meal as everyone at the table, portioned for you. Nobody eats grilled chicken out of a container while the rest of the house has something else.</p></div></div>
-        <div class="tick left"><div class="time">20:00</div><div class="body"><h4>Kids down, kitchen quiet</h4><p>The genuinely hard hour. There's a planned snack that fits your numbers waiting for exactly this, because willpower at 8pm on a Tuesday is not a strategy.</p></div></div>
-        <div class="tick right"><div class="time">21:30</div><div class="body"><h4>Check-in submitted</h4><p>Weight, steps, sleep, training, and one line on how the week feels. Two minutes. You wake up to adjustments rather than silence.</p></div></div>
-        <div class="tick left"><div class="time">22:20</div><div class="body"><h4>Lights out</h4><p>Seven and a half hours protected on purpose. Sleep is the cheapest performance input you have and the first one everybody trades away.</p></div></div>
+
+      <div class="bio">
+        <div class="bio-media">
+          <div class="photo" id="hl-portrait"><span>Portrait — 4:5</span></div>
+          <dl class="bio-cred">
+            <div data-cred="coachingSince"><dt>Coaching since</dt><dd></dd></div>
+            <div data-cred="clientsCoached"><dt>Clients coached</dt><dd></dd></div>
+            <div><dt>Format</dt><dd>100% online, 1:1</dd></div>
+            <div data-cred="certifications"><dt>Certifications</dt><dd></dd></div>
+          </dl>
+        </div>
+
+        <div>
+          <p><strong>Seven years ago, I started posting my fitness journey every single day.</strong></p>
+          <p>At the time, I had no idea where it would lead. I was bouncing between jobs, trying different businesses, and searching for something I could truly build my life around. The one thing I always came back to was fitness.</p>
+          <p>But my relationship with fitness wasn't always healthy.</p>
+          <p>For years, I trained like a bodybuilder and built my entire life around the gym. No balance. No real structure. Eating out made me feel guilty. Missing a workout felt like failure. I could be in great shape physically while mentally feeling completely lost.</p>
+          <p>There were periods where I was depressed, uncertain about my future, and putting everything I had into becoming better physically because it was one of the few things I felt like I could control.</p>
+
+          <div class="kicker">Eventually, I realized I didn't want fitness to be my entire life. I wanted fitness to make my life better.</div>
+
+          <p>That's when I discovered hybrid training and everything started to change.</p>
+          <p>I learned how to lift, run, eat, travel, go out, build a business, and still make progress &mdash; without the constant guilt of feeling like I was doing something wrong.</p>
+          <p>And after seven years of documenting my own journey, that became the foundation of Hybrid Life Coaching.</p>
+          <p><strong>You shouldn't have to choose between being in incredible shape and actually enjoying your life. The goal is to build both.</strong></p>
+
+          <p class="sig">Myles Harris &middot; Founder, Hybrid Life Coaching</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PHASES ============ -->
+  <!-- ============ FAQ ============ -->
   <section class="sec" id="hl-phases">
     <div class="grain" aria-hidden="true"></div>
     <div class="wrap">
@@ -833,47 +846,6 @@
   </section>
 
   <!-- ============ COACH ============ -->
-  <section class="sec coach" id="hl-coach">
-    <div class="grain" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="sec-head" style="margin-bottom:44px">
-        <p class="eyebrow">Your coach</p>
-        <h2 class="h2">Why I built <em>Hybrid Life</em></h2>
-      </div>
-
-      <div class="bio">
-        <div class="bio-media">
-          <!-- SWAP: 4:5 portrait — style="background-image:url('/assets/myles-portrait.jpg')" and delete the span -->
-          <div class="photo" id="hl-portrait"><span>Portrait — 4:5</span></div>
-          <dl class="bio-cred">
-            <div data-cred="coachingSince"><dt>Coaching since</dt><dd></dd></div>
-            <div data-cred="clientsCoached"><dt>Clients coached</dt><dd></dd></div>
-            <div><dt>Format</dt><dd>100% online, 1:1</dd></div>
-            <div data-cred="certifications"><dt>Certifications</dt><dd></dd></div>
-          </dl>
-        </div>
-
-        <div>
-          <p><strong>Seven years ago, I started posting my fitness journey every single day.</strong></p>
-          <p>At the time, I had no idea where it would lead. I was bouncing between jobs, trying different businesses, and searching for something I could truly build my life around. The one thing I always came back to was fitness.</p>
-          <p>But my relationship with fitness wasn't always healthy.</p>
-          <p>For years, I trained like a bodybuilder and built my entire life around the gym. No balance. No real structure. Eating out made me feel guilty. Missing a workout felt like failure. I could be in great shape physically while mentally feeling completely lost.</p>
-          <p>There were periods where I was depressed, uncertain about my future, and putting everything I had into becoming better physically because it was one of the few things I felt like I could control.</p>
-
-          <div class="kicker">Eventually, I realized I didn't want fitness to be my entire life. I wanted fitness to make my life better.</div>
-
-          <p>That's when I discovered hybrid training and everything started to change.</p>
-          <p>I learned how to lift, run, eat, travel, go out, build a business, and still make progress &mdash; without the constant guilt of feeling like I was doing something wrong.</p>
-          <p>And after seven years of documenting my own journey, that became the foundation of Hybrid Life Coaching.</p>
-          <p><strong>You shouldn't have to choose between being in incredible shape and actually enjoying your life. The goal is to build both.</strong></p>
-
-          <p class="sig">Myles Harris &middot; Founder, Hybrid Life Coaching</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ ============ -->
   <section class="sec light" id="hl-faq">
     <div class="wrap">
       <div class="sec-head">
